@@ -1,4 +1,14 @@
 /* ::::: Firefox 4 ::::: */
+
+.widget-overflow-list,
+.panel-banner-item  {
+  display: none !important;
+}
+
+#customization-panelHolder {
+  min-height: auto !important;
+}
+
 @import "chrome://branding/content/branding.css";
 :root {
   --browser-area-z-index-toolbox: 1 !important;
