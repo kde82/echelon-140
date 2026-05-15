@@ -4224,6 +4224,57 @@ echelon-splitmenu .splitmenu-menu > .menu-accel-container,
   height: 16px !important;
   background-image: url("chrome://echelon/content/firefox-4/places/libraryToolbar.png") !important;
 }
+#placesMenu {
+  & > menu {
+    &::after {
+      display: none !important;
+    }
+  }
+}
+treechildren::-moz-tree-image(container, queryFolder_toolbar_____) {
+  list-style-image: url("chrome://echelon/content/firefox-4/places/bookmarksToolbar.png") !important;
+}
+
+treechildren::-moz-tree-image(container, queryFolder_menu________) {
+  list-style-image: url("chrome://echelon/content/firefox-4/places/bookmarksMenu.png") !important;
+}
+
+treechildren::-moz-tree-image(query) {
+  list-style-image: url("chrome://echelon/content/firefox-4/places/folder-smart.svg");
+}
+
+treechildren::-moz-tree-image(query, OrganizerQuery_allbms_____v) {
+  list-style-image: url("chrome://echelon/content/firefox-4/places/allBookmarks.png") !important;
+}
+
+treechildren::-moz-tree-image(query, OrganizerQuery_downloads__v) {
+  list-style-image: url("chrome://echelon/content/firefox-4/places/downloads.png") !important;
+}
+
+treechildren::-moz-tree-image(title, query, tagContainer),
+treechildren::-moz-tree-image(query, OrganizerQuery_tags_______v) {
+  list-style-image: url("chrome://echelon/content/firefox-4/places/tagContainerIcon.png") !important;
+}
+
+treechildren::-moz-tree-image(title, query, dayContainer) {
+  list-style-image: url("chrome://echelon/content/firefox-4/places/calendar.png") !important;
+}
+
+treechildren::-moz-tree-image(title, container),
+treechildren::-moz-tree-image(title, open),
+treechildren::-moz-tree-image(title, query, hostContainer),
+treechildren::-moz-tree-image(title, query, folder) {
+  list-style-image: url("chrome://echelon/content/firefox-4/bookmarks/bookmarksFolder.png") !important;
+}
+
+treechildren::-moz-tree-image(query, OrganizerQuery_history____v) {
+  list-style-image: url("chrome://echelon/content/firefox-4/places/history.png") !important;
+}
+
+.expander-up, .expander-down {
+  appearance: revert !important;
+  border: revert !important;
+}
 
 #viewMenu .menubar-left {
   background-position-x: -16px !important;
