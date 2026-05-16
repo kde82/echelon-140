@@ -6507,7 +6507,7 @@ xul|dialog[inbrowserwindow] {
   box-shadow: var(--toolbarbutton-shadow-active) !important;
 }
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar {
-  width: 35px !important;
+  width: 36px !important;
   margin-inline-start: -10px !important;
   background-color: var(--backbutton-background) !important;
   border-color: var(--backbutton-border-color) !important;
