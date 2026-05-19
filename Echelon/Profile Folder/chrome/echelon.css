@@ -7,6 +7,16 @@
 #customization-panelHolder {
   min-height: auto !important;
 }
+menulist > menupopup,
+:host(:not([native])) {
+  appearance: revert !important;
+  background: revert !important;
+  color: revert !important;
+  border-radius: revert !important;
+}
+:host(:not([native]):hover) {
+  background: revert !important;
+}
 
 @import "chrome://branding/content/branding.css";
 :root {
@@ -4258,15 +4268,18 @@ treechildren::-moz-tree-twisty(open) {
 treechildren::-moz-tree-image(title, container),
 treechildren::-moz-tree-image(title, open),
 treechildren::-moz-tree-image(title, query, hostContainer),
-treechildren::-moz-tree-image(title, query, folder) {
+treechildren::-moz-tree-image(title, query, folder),
+.folder-icon  {
   list-style-image: url("chrome://echelon/content/firefox-4/bookmarks/bookmarksFolder.png") !important;
 }
 
-treechildren::-moz-tree-image(container, queryFolder_toolbar_____) {
+treechildren::-moz-tree-image(container, queryFolder_toolbar_____),
+#editBMPanel_toolbarFolderItem  {
   list-style-image: url("chrome://echelon/content/firefox-4/places/bookmarksToolbar.png") !important;
 }
 
-treechildren::-moz-tree-image(container, queryFolder_menu________) {
+treechildren::-moz-tree-image(container, queryFolder_menu________),
+#editBMPanel_bmRootItem  {
   list-style-image: url("chrome://echelon/content/firefox-4/places/bookmarksMenu.png") !important;
 }
 
