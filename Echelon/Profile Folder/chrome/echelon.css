@@ -133,7 +133,7 @@ window {
 }
 
 @media (-moz-platform: windows) and (not (-moz-windows-classic)) and (not (-moz-windows-compositor)) {
-  :root[sizemode="normal"][tabsintitlebar] .titlebar-buttonbox-container {
+  :root[sizemode="normal"][tabsintitlebar][echelon-system-style=winxp]:not([echelon-style-6]) .titlebar-buttonbox-container:not([echelon-style-6]) {
     position: absolute;
     right: 0;
     top: 0px;
