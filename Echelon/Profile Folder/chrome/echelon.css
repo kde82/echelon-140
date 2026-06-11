@@ -64,8 +64,8 @@ window {
   visibility: collapse !important;
 }
 :root[echelon-system-style=winxp]:not([echelon-style-6])[tabsintitlebar=true]:not([sizemode=maximized])[tabs-on-top] #toolbar-menubar .titlebar-buttonbox-container, 
-:root[echelon-system-style=winxp]:not([echelon-style-6])[tabs-on-top] #TabsToolbar:not(.browser-titlebar) .titlebar-buttonbox-container, 
-:root[echelon-system-style=winxp]:not([echelon-style-6])[tabs-on-top] #toolbar-menubar:not([inactive=true]) + #TabsToolbar .titlebar-buttonbox-container {
+:root[echelon-system-style=winxp]:not([echelon-style-6])[tabs-on-top]:not([sizemode=maximized]) #TabsToolbar:not(.browser-titlebar) .titlebar-buttonbox-container, 
+:root[echelon-system-style=winxp]:not([echelon-style-6])[tabs-on-top]:not([sizemode=maximized]) #toolbar-menubar:not([inactive=true]) + #TabsToolbar .titlebar-buttonbox-container {
   visibility: inherit !important;
 }
 :root:not([echelon-style-6])[echelon-system-style=winxp]:not([sizemode=maximized]):not([lwtheme=true]) #titlebar {
