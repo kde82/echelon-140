@@ -131,11 +131,20 @@ window {
     padding-top: 2px !important;
   }
 }
+
+@media (-moz-platform: windows) and (not (-moz-windows-classic)) and (not (-moz-windows-compositor)) {
+  :root[sizemode="normal"][tabsintitlebar] .titlebar-buttonbox-container {
+    position: absolute;
+    right: 0;
+    top: 0px;
+  }
+}
 @media (-moz-platform: windows) and (not (-moz-windows-classic)) and (not (-moz-windows-compositor)) {
   :root[sizemode=normal][tabsintitlebar] .titlebar-buttonbox {
     margin-block-start: var(--paddedborder);
   }
 }
+
 :root {
   --toolbarbutton-width: 30px !important;
   --toolbarbutton-height: 24px !important;
