@@ -1,5 +1,3 @@
-/* ::::: Firefox 4 ::::: */
-
 .panel-banner-item  {
   display: none !important;
 }
@@ -17,6 +15,13 @@ menulist > menupopup,
 :host(:not([native]):hover) {
   background: revert !important;
 }
+
+:root[inDOMFullscreen][echelon-style-6][lwtheme="true"] #titlebar,
+:root[inDOMFullscreen][echelon-style-6]:not([echelon-style-7][echelon-system-style="win8"], [echelon-style-7][echelon-system-style="win10"]) #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button .toolbarbutton-menubutton-button {
+  display: none !important;
+}
+
+/* ::::: Firefox 4 ::::: */
 
 @import "chrome://branding/content/branding.css";
 :root {
@@ -6623,13 +6628,16 @@ xul|dialog[inbrowserwindow] {
 }
 :root[echelon-style-7][echelon-style-6] #urlbar #identity-box {
   padding: 3px 5px !important;
-  padding-inline-end: 2px !important;
-  margin-inline-end: 2px !important;
   font-size: 0.9em !important;
   transition: padding-left, padding-right !important;
   fill: currentColor !important;
   fill-opacity: 0.6 !important;
   overflow: hidden !important;
+  padding-inline-end: 4px !important;
+  margin-inline-end: 4px !important;
+  border-inline-end: 1px solid var(--urlbar-separator-color) !important;
+  border-image: linear-gradient(transparent 15%, var(--urlbar-separator-color) 15%, var(--urlbar-separator-color) 85%, transparent 85%) !important;
+  border-image-slice: 1 !important;
 }
 :root[echelon-style-7][echelon-style-6] #urlbar #identity-box:not(.chromeUI, .verifiedIdentity) #identity-icon-label {
   visibility: collapse !important;
