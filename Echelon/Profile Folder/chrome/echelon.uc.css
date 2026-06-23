@@ -22,6 +22,16 @@
   pointer-events: none !important;
 }
 
+@media not (prefers-contrast) {
+  :root {
+    --organizer-hover-background: rgba(217,217,217,.66);
+    --organizer-selected-background: rgb(217,217,217);
+    --organizer-focus-selected-background: rgb(205,232,255);
+    --organizer-outline-color: rgb(123,195,255);
+	--organizer-focus-selected-color: rgb(21,20,26);
+}
+}
+
 /* ::::: Firefox 4 ::::: */
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 /* Tooltip appearance */
