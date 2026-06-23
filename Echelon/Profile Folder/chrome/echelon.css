@@ -26,8 +26,8 @@ menulist > menupopup,
 
 
 
-
-:root[echelon-style-7] .search-panel-current-engine, .search-panel-header {
+:root[echelon-style-7] .search-panel-current-engine, 
+:root[echelon-style-7] .search-panel-header {
   padding: 3px 6px !important;
   background-color: var(--arrowpanel-dimmed) !important;
   border-top: 1px solid var(--panel-separator-color) !important;
