@@ -1017,6 +1017,11 @@ window {
 :root:not([lwtheme-brighttext]) #downloads-button[attention=success] {
   list-style-image: url("chrome://echelon/content/firefox-4/toolbar/download-glow.png") !important;
 }
+
+:root:not([lwtheme-brighttext]) #downloads-button[attention=success] {
+  list-style-image: url("chrome://echelon/content/firefox-4/toolbar/download-glow.png") !important;
+}
+
 :root:not([lwtheme-brighttext]) #history-button {
   list-style-image: url("chrome://echelon/content/firefox-4/toolbar/history.png") !important;
 }
