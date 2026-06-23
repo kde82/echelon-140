@@ -193,6 +193,70 @@ menulist > menupopup,
 }
 
 
+
+
+:root[echelon-style-7] #placesList,
+:root[echelon-style-7] tree,
+:root[echelon-style-7] #downloadsListBox   {
+  background-color: #fff !important;
+}
+:root[echelon-style-7] #detailsPane {
+  background-color: #F0F0F0 !important;
+  color: var(--organizer-color) !important;
+  border-top: 1px solid #A0A0A0 !important;
+}
+:root[echelon-style-7] #downloadsListBox > richlistitem {
+  min-height: 6em !important;
+}
+:root[echelon-style-7] richlistitem[selected="true"] {
+    color: inherit !important;
+    background-color: transparent !important;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.9) 3px, transparent 3px), linear-gradient(to right, rgba(255,255,255,0.5) 3px, transparent 3px), linear-gradient(to left, rgba(255,255,255,0.5) 3px, transparent 3px), linear-gradient(to top, rgba(255,255,255,0.4) 3px, transparent 3px), linear-gradient(to bottom, rgba(163,196,247,0.3), rgba(122,180,246,0.3)) !important;
+    background-clip: content-box !important;
+    border-radius: 6px !important;
+    outline: 1px solid rgb(124,163,206) !important;
+    outline-offset: -2px !important;
+}
+@media not (-moz-windows-classic) {
+  :root[echelon-style-7][echelon-appearance-blue] #placesToolbar {
+    background-color: #F0F0F0 !important;
+	min-height: 32px !important;
+    appearance: unset !important;
+    color: unset !important;
+}
+:root[echelon-style-7][echelon-appearance-blue] #placesMenu menu .menubar-text {
+    padding-inline-end: 8px !important;
+    background: url("chrome://echelon/content/firefox-4/arrow-dn.gif") right center no-repeat !important;
+  }
+}
+:root[echelon-style-7] #searchFilter {
+  min-width: 22.5em !important;
+}
+:root[echelon-style-7] #placesToolbar #back-button, 
+:root[echelon-style-7] #placesToolbar #forward-button {
+  height: 20px !important;
+  width: 19px !important;
+  background-image: url("chrome://echelon/content/firefox-56/toolbar/Toolbar.png") !important;
+}
+:root[echelon-style-7] #placesToolbar #back-button,
+:root[echelon-style-7] #placesToolbar #back-button:hover  {
+  background-position: -36px 0px !important;
+  margin-right: 2px !important;
+}
+:root[echelon-style-7] #placesToolbar #forward-button,
+:root[echelon-style-7] #placesToolbar #forward-button:hover {
+  background-position: -52px 0 !important;
+
+}
+:root[echelon-style-7] #placesToolbar #back-button[disabled], 
+:root[echelon-style-7] #placesToolbar #forward-button[disabled] {
+    opacity: .4 !important;
+}
+
+menu, menuitem, menucaption {
+  border-radius: revert !important;
+}
+
 /* ::::: Firefox 4 ::::: */
 
 @import "chrome://branding/content/branding.css";
@@ -7995,3 +8059,4 @@ xul|dialog[inbrowserwindow] {
 :root:not([tabs-on-top]) #TabsToolbar .titlebar-buttonbox-container {
   display: none !important
 }
+
