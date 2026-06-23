@@ -117,6 +117,29 @@ menulist > menupopup,
 }
 
 
+
+#sidebar-icon {
+  display: none !important;
+}
+
+#sidebar-header {
+  padding: 0 !important;
+  border-bottom: 0 !important;
+  height: 25px !important;
+}
+
+#sidebar-switcher-target {
+  border-radius: 0 !important;
+  border: 0 !important;
+  padding: 1px 5px 2px 6px !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+}
+
+#sidebar-box {
+  background-color: #F0F0F0 !important;
+}
+
 /* ::::: Firefox 4 ::::: */
 
 @import "chrome://branding/content/branding.css";
@@ -1237,6 +1260,9 @@ window {
 }
 :root[echelon-style-7] .tab-icon-image[src="chrome://global/skin/icons/settings.svg"] {
   content: url("chrome://echelon/content/firefox-56/preferences.ico") !important;
+}
+:root[echelon-style-7] .tab-icon-image[src="chrome://browser/skin/customize.svg"] {
+  content: url("chrome://echelon/content/firefox-56/customizeFavicon.ico") !important;
 }
 :root #page-action-buttons .urlbar-page-action {
   all: revert !important;
