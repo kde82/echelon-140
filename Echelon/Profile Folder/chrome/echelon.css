@@ -112,6 +112,11 @@ menulist > menupopup,
 }
 
 
+:root[echelon-style-7] panel[type="arrow"]:not([animate="false"]), :root[echelon-style-7] #BMB_bookmarksPopup:not([animate="false"]) {
+  transform-origin: calc(100% - 20px) top !important;
+}
+
+
 /* ::::: Firefox 4 ::::: */
 
 @import "chrome://branding/content/branding.css";
