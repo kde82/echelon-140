@@ -21,6 +21,82 @@ menulist > menupopup,
   display: none !important;
 }
 
+
+
+
+
+
+
+:root[echelon-style-7] .search-panel-current-engine, .search-panel-header {
+  padding: 3px 6px !important;
+  background-color: var(--arrowpanel-dimmed) !important;
+  border-top: 1px solid var(--panel-separator-color) !important;
+  color: GrayText !important;
+}
+
+.search-panel-header > label {
+  margin-top: 1px !important;
+  margin-bottom: 1px !important;
+}
+
+:root[echelon-style-7] .searchbar-separator,
+:root[echelon-style-7] #PopupSearchAutoComplete .search-setting-button > .button-box > .button-icon  {
+  display: none !important;
+}
+
+:root[echelon-style-7] .search-panel-one-offs-container {
+  border-top: 1px solid var(--panel-separator-color) !important;
+}
+
+:root[echelon-style-7] #PopupSearchAutoComplete .searchbar-engine-one-off-item {
+  min-width: 48px !important;
+  height: 32px !important;
+  margin-inline: 0 !important;
+  background: linear-gradient(transparent 15%, var(--panel-separator-color) 15%, var(--panel-separator-color) 85%, transparent 85%) !important;
+  background-size: 1px auto !important;
+  background-repeat: no-repeat !important;
+  background-position: right center !important;
+  color: GrayText !important;
+  &:hover {
+  background-color: var(--arrowpanel-dimmed-further) !important;
+  color: inherit !important;
+}
+}
+
+:root[echelon-style-7] #PopupSearchAutoComplete .searchbar-engine-one-off-item:not(.last-row) {
+    box-sizing: content-box !important;
+    border-bottom: 1px solid var(--panel-separator-color) !important;
+}
+
+:root[echelon-style-7] #PopupSearchAutoComplete .search-panel-one-offs-container {
+  width: 101% !important;
+  flex-wrap: wrap;
+}
+
+:root[echelon-style-7] #PopupSearchAutoComplete .search-setting-button {
+  width: 100% !important;
+  max-height: 32px !important;
+  line-height: 24px !important;
+  align-self: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: var(--arrowpanel-dimmed) !important;
+  border-top: 1px solid var(--panel-separator-color) !important;
+  color: GrayText !important;
+  &::before {
+	  content: 'Change Search Settings';
+	  width: 100%;
+	  font-size: 12px;
+	  text-align: center;
+	  padding: 3px 6px;
+}
+}
+
+:root[echelon-style-7] #PopupSearchAutoComplete #searchbar-engine-one-off-item-engine-99 {
+    background-image: none !important;
+}
+
+
 /* ::::: Firefox 4 ::::: */
 
 @import "chrome://branding/content/branding.css";
