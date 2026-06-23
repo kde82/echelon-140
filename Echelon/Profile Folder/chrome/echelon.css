@@ -115,7 +115,9 @@ menulist > menupopup,
 :root[echelon-style-7] panel[type="arrow"]:not([animate="false"]), :root[echelon-style-7] #BMB_bookmarksPopup:not([animate="false"]) {
   transform-origin: calc(100% - 20px) top !important;
 }
-
+#identity-popup {
+    transform-origin: 20px top !important;
+}
 
 
 #sidebar-icon {
