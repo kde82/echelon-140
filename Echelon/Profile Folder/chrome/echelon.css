@@ -1230,6 +1230,9 @@ window {
 :root[echelon-system-style=winxp] #identity-icon[style="list-style-image: url('chrome://mozapps/skin/extensions/extension.svg');"] {
   list-style-image: url("chrome://echelon/content/firefox-4/xp/extensions/extensionGeneric-16.png") !important;
 }
+:root[echelon-style-7] .tab-icon-image[src="chrome://global/skin/icons/settings.svg"] {
+  content: url("chrome://echelon/content/firefox-56/preferences.ico") !important;
+}
 :root #page-action-buttons .urlbar-page-action {
   all: revert !important;
   padding: 0 2px !important;
