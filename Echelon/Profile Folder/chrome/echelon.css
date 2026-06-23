@@ -92,8 +92,23 @@ menulist > menupopup,
 }
 }
 
-:root[echelon-style-7] #PopupSearchAutoComplete #searchbar-engine-one-off-item-engine-99 {
-    background-image: none !important;
+
+
+
+#identity-popup-allow-sitedata-button {
+  display: none !important;
+}
+
+.panel-subview-body {
+  padding-top: 10px !important;
+}
+
+:root[echelon-style-7] .identity-popup-connection-secure {
+    color: #418220;
+}
+
+:root[echelon-style-7] #identity-popup[connection^="secure"] .identity-popup-security-connection {
+    list-style-image: url("chrome://echelon/content/firefox-56/controlcenter/conn-secure.svg") !important;
 }
 
 
