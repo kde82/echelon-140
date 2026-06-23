@@ -1,3 +1,27 @@
+:root[echelon-style-7] #PopupSearchAutoComplete::part(content) {
+  min-width: 384px !important;
+  color: -moz-FieldText !important;
+  background-color: -moz-Field !important;
+  border: 1px solid ThreeDShadow !important;
+  box-shadow: unset !important;
+  margin: 4px 6px 6px 4px !important;
+  padding: 0 !important;
+}
+
+:root[echelon-style-7] #PopupSearchAutoComplete::part(content)::after {
+  content: "" !important;
+  display: inline-block !important;
+  width: calc(100% - 18px) !important;
+  height: calc(100% - 18px) !important;
+  position: absolute !important;
+  left: 14px !important;
+  top: 14px !important;
+  z-index: -1 !important;
+  background: rgba(0, 0, 0, 0.502) !important;
+  filter: blur(1.5px) !important;
+  pointer-events: none !important;
+}
+
 /* ::::: Firefox 4 ::::: */
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 /* Tooltip appearance */
