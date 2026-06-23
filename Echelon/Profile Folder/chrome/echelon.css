@@ -140,6 +140,58 @@ menulist > menupopup,
   background-color: #F0F0F0 !important;
 }
 
+
+
+
+
+
+
+:root[echelon-style-7] .browserContainer > findbar {
+  background-color: #F0F0F0 !important;
+  border: 0 !important;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1) inset !important;
+  background-image: linear-gradient(rgba(0,0,0,.15) 1px, rgba(255,255,255,.15) 1px) !important;
+  background-size: 100% 2px !important;
+  background-repeat: no-repeat !important;
+  padding-block: 4px !important;
+}
+:root[echelon-style-7] .findbar-textbox {
+  background-color: #fff !important;
+  color: -moz-FieldText !important;
+  border: 1px solid ThreeDShadow !important;
+  border-radius: 0 !important;
+  outline: none !important;
+  margin: 1px 0 1px 1px !important;
+  padding: 1px 5px !important;
+  padding-inline-start: 5px !important;
+  width: 14em !important;
+}
+:root[echelon-style-7].findbar-find-previous, .findbar-find-next {
+  background: linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.4) 1px, rgba(255,255,255,.1)) !important;
+  padding: 1px 6px !important;
+  line-height: 1em !important;
+  border: 1px solid ThreeDShadow !important;
+  border-radius: 0px !important;
+  height: 22px !important;
+  margin: 1px 0 1px -1px !important;
+}
+:root[echelon-style-7].findbar-find-next {
+  border-top-right-radius: 2px !important;
+  border-bottom-right-radius: 2px!important; 
+}
+:root[echelon-style-7].findbar-find-previous {
+  list-style-image: url('chrome://echelon/content/firefox-56/find/find-arrows-previous.png') !important;
+}
+:root[echelon-style-7] .findbar-find-next {
+  list-style-image: url('chrome://echelon/content/firefox-56/find/find-arrows-next.png') !important;
+}
+:root[echelon-style-7].findbar-find-previous, .findbar-find-next {
+  &[disabled="true"] > .toolbarbutton-icon {
+    opacity: .5 !important;
+  }
+}
+
+
 /* ::::: Firefox 4 ::::: */
 
 @import "chrome://branding/content/branding.css";
