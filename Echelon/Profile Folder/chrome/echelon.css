@@ -166,7 +166,8 @@ menulist > menupopup,
   padding-inline-start: 5px !important;
   width: 14em !important;
 }
-:root[echelon-style-7].findbar-find-previous, .findbar-find-next {
+:root[echelon-style-7] .findbar-find-previous, 
+:root[echelon-style-7] .findbar-find-next {
   background: linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.4) 1px, rgba(255,255,255,.1)) !important;
   padding: 1px 6px !important;
   line-height: 1em !important;
@@ -179,7 +180,7 @@ menulist > menupopup,
   border-top-right-radius: 2px !important;
   border-bottom-right-radius: 2px!important; 
 }
-:root[echelon-style-7].findbar-find-previous {
+:root[echelon-style-7] .findbar-find-previous {
   list-style-image: url('chrome://echelon/content/firefox-56/find/find-arrows-previous.png') !important;
 }
 :root[echelon-style-7] .findbar-find-next {
