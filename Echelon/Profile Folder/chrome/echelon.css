@@ -118,7 +118,9 @@ menulist > menupopup,
 #identity-popup {
     transform-origin: 20px top !important;
 }
-
+#customization-uidensity-menu {
+  transform-origin: 20px bottom !important;
+}
 
 :root:not([echelon-style-7]) #sidebar-icon {
   display: none !important;
@@ -161,7 +163,7 @@ menulist > menupopup,
 }
 :root[echelon-style-7][echelon-style-6] .findbar-textbox {
   background-color: #fff !important;
-  color: -moz-FieldText !important;
+  color: #333 !important;
   border: 1px solid ThreeDShadow !important;
   border-radius: 0 !important;
   outline: none !important;
@@ -174,6 +176,9 @@ menulist > menupopup,
     box-shadow: unset !important;
     border-color: rgb(51, 153, 255) !important;
   }
+}
+:root[echelon-style-7][echelon-style-6] .findbar-textbox > div {
+  color: -moz-FieldText !important;
 }
 :root[echelon-style-7][echelon-style-6] .findbar-find-previous, 
 :root[echelon-style-7][echelon-style-6] .findbar-find-next {
@@ -218,7 +223,9 @@ menulist > menupopup,
 :root[echelon-style-7] .findbar-container > checkbox .checkbox-check {
   display: none;
 }
-
+:root[echelon-style-7] .checkbox-label {
+  color: #333;
+}
 
 
 
@@ -282,6 +289,30 @@ menulist > menupopup,
 
 menu, menuitem, menucaption {
   border-radius: revert !important;
+}
+
+:root[echelon-style-7] #PlacesChevron, #nav-bar-overflow-button {
+  list-style-image: url("chrome://echelon/content/firefox-56/toolbar/chevron.gif") !important;
+}
+:root[echelon-style-7] #PlacesChevron {
+  padding: 0 !important;
+  height: 24px;
+  width: 16px;
+}
+:root[echelon-style-7] #PersonalToolbar .toolbarbutton-1:not(#bookmarks-menu-button) .toolbarbutton-icon {
+  width: 16px !important;
+  height: 13px !important;
+  margin-inline-end: 0 !important;
+  margin: 2px !important;
+}
+:root[echelon-style-7] toolbar .toolbarbutton-1 {
+  &:not([disabled]) {
+    &:is(:hover:active, [open], [checked]) > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack),
+    &:hover > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack)	{
+      background-color: unset !important;
+      color: inherit;
+    }
+  }
 }
 
 /* ::::: Firefox 4 ::::: */
