@@ -126,9 +126,17 @@ menulist > menupopup,
   display: none !important;
 }
 
+#sidebar-header {
+  border-bottom: 0 !important;
+}
+
+
+#sidebar-box[sidebar-positionend] + & {
+  border-color: #e3e3e3 !important;
+}
+
 :root:not([echelon-style-7]) #sidebar-header {
   padding: 0 !important;
-  border-bottom: 0 !important;
   height: 25px !important;
 }
 
@@ -148,7 +156,7 @@ menulist > menupopup,
 }
 :root[echelon-style-7] #sidebar-switcher-target {
     -moz-appearance: none !important;
-    color: inherit !important;
+    color: #333 !important;
     margin-inline-end: 4px !important;
     border-radius: 4px !important;
     border: 1px solid transparent;
@@ -341,24 +349,6 @@ toolbar .toolbarbutton-1 {
   }
 }
 
-/*
-#scrollbutton-up > .toolbarbutton-icon, 
-#scrollbutton-down > .toolbarbutton-icon {
-  width: 5px !important;
-  height: 3px !important;
-  list-style-image: none !important;
-  margin-top: 1px !important;
-  margin-bottom: 2px !important;
-  margin-inline-start: 1px !important;
-  margin-inline-end: 2px !important;
-}
-#scrollbutton-up > .toolbarbutton-icon {
-  background-image: url("chrome://echelon/content/firefox-4/arrow-up.gif") !important;
-}
-#scrollbutton-down > .toolbarbutton-icon {
-  background-image: url("chrome://echelon/content/firefox-4/arrow-dn.gif") !important;
-}
-*/
 
 /* ::::: Firefox 4 ::::: */
 
