@@ -146,13 +146,32 @@ menulist > menupopup,
 :root:not([echelon-style-7]) #sidebar-box {
   background-color: #EEF3FA !important;
 }
+:root[echelon-style-7] #sidebar-switcher-target {
+    -moz-appearance: none;
+    color: inherit;
+    margin-inline-end: 4px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    padding: 2px 4px;
+}
+:root[echelon-style-7] #sidebar-switcher-target:hover {
+    border-color: #B7B7B7;
+}
+:root[echelon-style-7] #sidebar-switcher-target:hover, #sidebar-close:hover {
+    background: #E4E4E4;
+}
+:root[echelon-style-7] #sidebar-switcher-target:hover:active, #sidebar-switcher-target.active {
+    border-color: #A3A3A3;
+}
+:root[echelon-style-7] #sidebar-close:hover:active, #sidebar-switcher-target:hover:active, #sidebar-switcher-target.active {
+    background: #D9D9D9;
+}
 
 
 
 
 
-
-:root[echelon-style-7][echelon-style-6] .browserContainer > findbar {
+.browserContainer > findbar {
   background-color: #F0F0F0 !important;
   border: 0 !important;
   box-shadow: 0 1px 1px rgba(0,0,0,.1) inset !important;
@@ -161,7 +180,7 @@ menulist > menupopup,
   background-repeat: no-repeat !important;
   padding-block: 4px !important;
 }
-:root[echelon-style-7][echelon-style-6] .findbar-textbox {
+.findbar-textbox {
   background-color: #fff !important;
   color: #333 !important;
   border: 1px solid ThreeDShadow !important;
@@ -177,11 +196,11 @@ menulist > menupopup,
     border-color: rgb(51, 153, 255) !important;
   }
 }
-:root[echelon-style-7][echelon-style-6] .findbar-textbox > div {
+.findbar-textbox > div {
   color: -moz-FieldText !important;
 }
-:root[echelon-style-7][echelon-style-6] .findbar-find-previous, 
-:root[echelon-style-7][echelon-style-6] .findbar-find-next {
+.findbar-find-previous, 
+.findbar-find-next {
   background: linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.4) 1px, rgba(255,255,255,.1)) !important;
   padding: 1px 6px !important;
   line-height: 1em !important;
@@ -193,15 +212,15 @@ menulist > menupopup,
     box-shadow: 0 1px 2px rgba(10,31,51,.2) inset;
 }
 }
-:root[echelon-style-7][echelon-style-6] .findbar-find-previous {
+.findbar-find-previous {
   list-style-image: url('chrome://echelon/content/firefox-56/find/find-arrows-previous.png') !important;
   border-radius: 0px !important;
 }
-:root[echelon-style-7][echelon-style-6] .findbar-find-next {
+.findbar-find-next {
   list-style-image: url('chrome://echelon/content/firefox-56/find/find-arrows-next.png') !important;
   border-radius: 0 2px 2px 0 !important;
 }
-:root[echelon-style-7][echelon-style-6] .findbar-find-previous, .findbar-find-next {
+.findbar-find-previous, .findbar-find-next {
   &[disabled="true"] > .toolbarbutton-icon {
     opacity: .5 !important;
   }
@@ -291,21 +310,22 @@ menu, menuitem, menucaption {
   border-radius: revert !important;
 }
 
-:root[echelon-style-7] #PlacesChevron, #nav-bar-overflow-button {
+#PlacesChevron, #nav-bar-overflow-button {
   list-style-image: url("chrome://echelon/content/firefox-56/toolbar/chevron.gif") !important;
 }
-:root[echelon-style-7] #PlacesChevron {
+#PlacesChevron {
   padding: 0 !important;
   height: 24px;
   width: 16px;
 }
-:root[echelon-style-7] #PersonalToolbar .toolbarbutton-1:not(#bookmarks-menu-button) .toolbarbutton-icon {
+:root #PersonalToolbar .toolbarbutton-1:not(#bookmarks-menu-button) .toolbarbutton-icon {
   width: 16px !important;
   height: 13px !important;
   margin-inline-end: 0 !important;
   margin: 2px !important;
+  padding: 4px !important;
 }
-:root[echelon-style-7] toolbar .toolbarbutton-1 {
+toolbar .toolbarbutton-1 {
   &:not([disabled]) {
     &:is(:hover:active, [open], [checked]) > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack),
     &:hover > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack)	{
@@ -314,6 +334,25 @@ menu, menuitem, menucaption {
     }
   }
 }
+
+/*
+#scrollbutton-up > .toolbarbutton-icon, 
+#scrollbutton-down > .toolbarbutton-icon {
+  width: 5px !important;
+  height: 3px !important;
+  list-style-image: none !important;
+  margin-top: 1px !important;
+  margin-bottom: 2px !important;
+  margin-inline-start: 1px !important;
+  margin-inline-end: 2px !important;
+}
+#scrollbutton-up > .toolbarbutton-icon {
+  background-image: url("chrome://echelon/content/firefox-4/arrow-up.gif") !important;
+}
+#scrollbutton-down > .toolbarbutton-icon {
+  background-image: url("chrome://echelon/content/firefox-4/arrow-dn.gif") !important;
+}
+*/
 
 /* ::::: Firefox 4 ::::: */
 
