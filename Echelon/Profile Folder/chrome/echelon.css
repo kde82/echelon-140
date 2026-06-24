@@ -130,11 +130,13 @@ menulist > menupopup,
   border-bottom: 0 !important;
 }
 
-
-#sidebar-box[sidebar-positionend] + & {
-  border-color: #e3e3e3 !important;
+.sidebar-splitter {
+  @media -moz-pref("sidebar.revamp") or (not (-moz-platform: linux)) {
+    #sidebar-box[sidebar-positionend] + & {
+      border-color: #e3e3e3 !important;
+    }
+  }
 }
-
 :root:not([echelon-style-7]) #sidebar-header {
   padding: 0 !important;
   height: 25px !important;
