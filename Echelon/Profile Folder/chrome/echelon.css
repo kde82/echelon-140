@@ -40,12 +40,13 @@ menulist > menupopup,
 }
 
 :root[echelon-style-7] .searchbar-separator,
-:root[echelon-style-7] #PopupSearchAutoComplete .search-setting-button > .button-box > .button-icon  {
+:root[echelon-style-7] #PopupSearchAutoComplete .search-setting-button > .button-box > .button-icon {
   display: none !important;
 }
 
 :root[echelon-style-7] .search-panel-one-offs-container {
   border-top: 1px solid var(--panel-separator-color) !important;
+  background-color: var(--arrowpanel-dimmed) !important;
 }
 
 :root[echelon-style-7] #PopupSearchAutoComplete .searchbar-engine-one-off-item {
@@ -79,8 +80,7 @@ menulist > menupopup,
   line-height: 24px !important;
   align-self: center !important;
   padding: 0 !important;
-  margin: 0 !important;
-  background-color: var(--arrowpanel-dimmed) !important;
+    margin: -1px 0 0 0 !important;
   border-top: 1px solid var(--panel-separator-color) !important;
   color: GrayText !important;
   &::before {
@@ -120,17 +120,17 @@ menulist > menupopup,
 }
 
 
-#sidebar-icon {
+:root:not([echelon-style-7]) #sidebar-icon {
   display: none !important;
 }
 
-#sidebar-header {
+:root:not([echelon-style-7]) #sidebar-header {
   padding: 0 !important;
   border-bottom: 0 !important;
   height: 25px !important;
 }
 
-#sidebar-switcher-target {
+:root:not([echelon-style-7]) #sidebar-switcher-target {
   border-radius: 0 !important;
   border: 0 !important;
   padding: 1px 5px 2px 6px !important;
@@ -141,14 +141,16 @@ menulist > menupopup,
 #sidebar-box {
   background-color: #F0F0F0 !important;
 }
+:root:not([echelon-style-7]) #sidebar-box {
+  background-color: #EEF3FA !important;
+}
 
 
 
 
 
 
-
-:root[echelon-style-7] .browserContainer > findbar {
+:root[echelon-style-7][echelon-style-6] .browserContainer > findbar {
   background-color: #F0F0F0 !important;
   border: 0 !important;
   box-shadow: 0 1px 1px rgba(0,0,0,.1) inset !important;
@@ -157,7 +159,7 @@ menulist > menupopup,
   background-repeat: no-repeat !important;
   padding-block: 4px !important;
 }
-:root[echelon-style-7] .findbar-textbox {
+:root[echelon-style-7][echelon-style-6] .findbar-textbox {
   background-color: #fff !important;
   color: -moz-FieldText !important;
   border: 1px solid ThreeDShadow !important;
@@ -167,50 +169,73 @@ menulist > menupopup,
   padding: 1px 5px !important;
   padding-inline-start: 5px !important;
   width: 14em !important;
+  height: 20px !important;
+  &:focus {
+    box-shadow: unset !important;
+    border-color: rgb(51, 153, 255) !important;
+  }
 }
-:root[echelon-style-7] .findbar-find-previous, 
-:root[echelon-style-7] .findbar-find-next {
+:root[echelon-style-7][echelon-style-6] .findbar-find-previous, 
+:root[echelon-style-7][echelon-style-6] .findbar-find-next {
   background: linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.4) 1px, rgba(255,255,255,.1)) !important;
   padding: 1px 6px !important;
   line-height: 1em !important;
   border: 1px solid ThreeDShadow !important;
-  border-radius: 0px !important;
-  height: 22px !important;
+  height: 20px !important;
   margin: 1px 0 1px -1px !important;
+  &:active {
+    background: rgba(23,50,76,.2);
+    box-shadow: 0 1px 2px rgba(10,31,51,.2) inset;
 }
-:root[echelon-style-7].findbar-find-next {
-  border-top-right-radius: 2px !important;
-  border-bottom-right-radius: 2px!important; 
 }
-:root[echelon-style-7] .findbar-find-previous {
+:root[echelon-style-7][echelon-style-6] .findbar-find-previous {
   list-style-image: url('chrome://echelon/content/firefox-56/find/find-arrows-previous.png') !important;
+  border-radius: 0px !important;
 }
-:root[echelon-style-7] .findbar-find-next {
+:root[echelon-style-7][echelon-style-6] .findbar-find-next {
   list-style-image: url('chrome://echelon/content/firefox-56/find/find-arrows-next.png') !important;
+  border-radius: 0 2px 2px 0 !important;
 }
-:root[echelon-style-7].findbar-find-previous, .findbar-find-next {
+:root[echelon-style-7][echelon-style-6] .findbar-find-previous, .findbar-find-next {
   &[disabled="true"] > .toolbarbutton-icon {
     opacity: .5 !important;
   }
 }
+:root[echelon-style-7] .findbar-container > checkbox, .findbar-label {
+  margin: 0 4px;
+  flex-shrink: 0;
+  padding: 4px 8px;
+}
+:root[echelon-style-7] .findbar-container > checkbox:hover {
+  background-color: #D8D8D8;
+  outline: 1px solid #C0C0C0;
+}
+:root[echelon-style-7] .findbar-container > checkbox[checked="true"] {
+  background-color: #CCC;
+  outline: 2px solid #A8A8A8;
+  padding: 3px 8px;
+}
+:root[echelon-style-7] .findbar-container > checkbox .checkbox-check {
+  display: none;
+}
 
 
 
 
-:root[echelon-style-7] #placesList,
-:root[echelon-style-7] tree,
-:root[echelon-style-7] #downloadsListBox   {
+:root[echelon-style-7][echelon-style-6] #placesList,
+:root[echelon-style-7][echelon-style-6] tree,
+:root[echelon-style-7][echelon-style-6] #downloadsListBox   {
   background-color: #fff !important;
 }
-:root[echelon-style-7] #detailsPane {
+:root[echelon-style-7][echelon-style-6] #detailsPane {
   background-color: #F0F0F0 !important;
   color: var(--organizer-color) !important;
   border-top: 1px solid #A0A0A0 !important;
 }
-:root[echelon-style-7] #downloadsListBox > richlistitem {
+:root[echelon-style-7][echelon-style-6] #downloadsListBox > richlistitem {
   min-height: 6em !important;
 }
-:root[echelon-style-7] richlistitem[selected="true"] {
+:root[echelon-style-7][echelon-style-6] #contentView richlistitem[selected="true"] {
     color: inherit !important;
     background-color: transparent !important;
     background-image: linear-gradient(to bottom, rgba(255,255,255,0.9) 3px, transparent 3px), linear-gradient(to right, rgba(255,255,255,0.5) 3px, transparent 3px), linear-gradient(to left, rgba(255,255,255,0.5) 3px, transparent 3px), linear-gradient(to top, rgba(255,255,255,0.4) 3px, transparent 3px), linear-gradient(to bottom, rgba(163,196,247,0.3), rgba(122,180,246,0.3)) !important;
@@ -220,7 +245,7 @@ menulist > menupopup,
     outline-offset: -2px !important;
 }
 @media not (-moz-windows-classic) {
-  :root[echelon-style-7][echelon-appearance-blue] #placesToolbar {
+  :root[echelon-style-7][echelon-style-6][echelon-appearance-blue] #placesToolbar {
     background-color: #F0F0F0 !important;
 	min-height: 32px !important;
     appearance: unset !important;
@@ -231,27 +256,27 @@ menulist > menupopup,
     background: url("chrome://echelon/content/firefox-4/arrow-dn.gif") right center no-repeat !important;
   }
 }
-:root[echelon-style-7] #searchFilter {
+:root[echelon-style-7][echelon-style-6] #searchFilter {
   min-width: 22.5em !important;
 }
-:root[echelon-style-7] #placesToolbar #back-button, 
-:root[echelon-style-7] #placesToolbar #forward-button {
+:root[echelon-style-7][echelon-style-6] #placesToolbar #back-button, 
+:root[echelon-style-7][echelon-style-6] #placesToolbar #forward-button {
   height: 20px !important;
   width: 19px !important;
   background-image: url("chrome://echelon/content/firefox-56/toolbar/Toolbar.png") !important;
 }
-:root[echelon-style-7] #placesToolbar #back-button,
-:root[echelon-style-7] #placesToolbar #back-button:hover  {
+:root[echelon-style-7][echelon-style-6] #placesToolbar #back-button,
+:root[echelon-style-7][echelon-style-6] #placesToolbar #back-button:hover  {
   background-position: -36px 0px !important;
   margin-right: 2px !important;
 }
-:root[echelon-style-7] #placesToolbar #forward-button,
-:root[echelon-style-7] #placesToolbar #forward-button:hover {
+:root[echelon-style-7][echelon-style-6] #placesToolbar #forward-button,
+:root[echelon-style-7][echelon-style-6] #placesToolbar #forward-button:hover {
   background-position: -52px 0 !important;
 
 }
-:root[echelon-style-7] #placesToolbar #back-button[disabled], 
-:root[echelon-style-7] #placesToolbar #forward-button[disabled] {
+:root[echelon-style-7][echelon-style-6] #placesToolbar #back-button[disabled], 
+:root[echelon-style-7][echelon-style-6] #placesToolbar #forward-button[disabled] {
     opacity: .4 !important;
 }
 
@@ -1364,6 +1389,9 @@ window {
 }
 :root[lwtheme-brighttext] #echelon-button, :root[echelon-style-5]:not([tabs-on-top=true]) #echelon-button {
   list-style-image: url("chrome://echelon/content/firefox-4/toolbar/inverted/echelon.png") !important;
+}
+:root[lwtheme-brighttext] #sidebar-button, :root[echelon-style-5]:not([tabs-on-top=true]) #sidebar-button {
+  list-style-image: url("chrome://echelon/content/firefox-29/toolbar/inverted/sidebars.png") !important;
 }
 :root .tab-icon-image[src="chrome://mozapps/skin/extensions/extension.svg"] {
   content: url("chrome://echelon/content/firefox-4/extensions/extensionGeneric-16.png") !important;
