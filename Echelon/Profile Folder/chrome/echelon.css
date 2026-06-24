@@ -147,24 +147,24 @@ menulist > menupopup,
   background-color: #EEF3FA !important;
 }
 :root[echelon-style-7] #sidebar-switcher-target {
-    -moz-appearance: none;
-    color: inherit;
-    margin-inline-end: 4px;
-    border-radius: 4px;
-    border: 1px solid transparent;
-    padding: 2px 4px;
+    -moz-appearance: none !important;
+    color: inherit !important;
+    margin-inline-end: 4px !important;
+    border-radius: 4px !important;
+    border: 1px solid transparent !important;
+    padding: 2px 4px !important;
 }
 :root[echelon-style-7] #sidebar-switcher-target:hover {
-    border-color: #B7B7B7;
+    border-color: #B7B7B7 !important;
 }
 :root[echelon-style-7] #sidebar-switcher-target:hover, #sidebar-close:hover {
-    background: #E4E4E4;
+    background: #E4E4E4 !important;
 }
 :root[echelon-style-7] #sidebar-switcher-target:hover:active, #sidebar-switcher-target.active {
-    border-color: #A3A3A3;
+    border-color: #A3A3A3 !important; 
 }
 :root[echelon-style-7] #sidebar-close:hover:active, #sidebar-switcher-target:hover:active, #sidebar-switcher-target.active {
-    background: #D9D9D9;
+    background: #D9D9D9 !important;
 }
 
 
