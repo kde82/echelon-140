@@ -351,6 +351,16 @@ toolbar .toolbarbutton-1 {
   }
 }
 
+:root[chromehidden~="toolbar"] #navigator-toolbox {
+  appearance: -moz-window-titlebar !important;
+}
+:root[chromehidden~="toolbar"] .titlebar-buttonbox,
+:root[chromehidden~="toolbar"] .titlebar-button {
+  display: ruby !important;
+}
+:root[chromehidden~="toolbar"] #navigator-toolbox::after {
+  display: none !important;
+}
 
 /* ::::: Firefox 4 ::::: */
 
