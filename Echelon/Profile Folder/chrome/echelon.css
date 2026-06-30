@@ -362,6 +362,24 @@ toolbar .toolbarbutton-1 {
   display: none !important;
 }
 
+
+
+
+
+
+/*
+.menupopup-arrowscrollbox::part(scrollbutton-up), 
+.menupopup-arrowscrollbox::part(scrollbutton-down) {
+  width: 5px !important;
+  height: 3px !important;
+}
+.menupopup-arrowscrollbox #scrollbutton-up {
+  background-image: url("chrome://echelon/content/firefox-4/arrow-up.gif") !important;
+}
+.menupopup-arrowscrollbox::part(scrollbutton-down) {
+  background-image: url("chrome://echelon/content/firefox-4/arrow-dn.gif") !important;
+*/
+
 /* ::::: Firefox 4 ::::: */
 
 @import "chrome://branding/content/branding.css";
@@ -1483,10 +1501,10 @@ window {
 :root[echelon-system-style=winxp] #identity-icon[style="list-style-image: url('chrome://mozapps/skin/extensions/extension.svg');"] {
   list-style-image: url("chrome://echelon/content/firefox-4/xp/extensions/extensionGeneric-16.png") !important;
 }
-:root[echelon-style-7] .tab-icon-image[src="chrome://global/skin/icons/settings.svg"] {
+:root[echelon-style-6] .tab-icon-image[src="chrome://global/skin/icons/settings.svg"] {
   content: url("chrome://echelon/content/firefox-56/preferences.ico") !important;
 }
-:root[echelon-style-7] .tab-icon-image[src="chrome://browser/skin/customize.svg"] {
+:root[echelon-style-6] .tab-icon-image[src="chrome://browser/skin/customize.svg"] {
   content: url("chrome://echelon/content/firefox-56/customizeFavicon.ico") !important;
 }
 :root #page-action-buttons .urlbar-page-action {
@@ -5905,7 +5923,7 @@ xul|dialog[inbrowserwindow] {
   :root[echelon-style-6][echelon-appearance-blue]:not([lwtheme], [echelon-system-style=winxp], [echelon-system-style=win8], [echelon-system-style=win10]) #navigator-toolbox {
     position: relative !important;
   }
-  :root[echelon-style-6][echelon-appearance-blue]:not([lwtheme], [echelon-system-style=winxp], [echelon-system-style=win8], [echelon-system-style=win10]) #navigator-toolbox::before {
+  :root[echelon-style-6][echelon-appearance-blue]:not([lwtheme], [echelon-system-style=winxp], [echelon-system-style=win8], [echelon-system-style=win10], [chromehidden~="toolbar"]) #navigator-toolbox::before {
     /* Because we use placeholders for window controls etc. in the tabstrip,
      * and position those with ordinal attributes, and because our layout code
      * expects :before/:after nodes to come first/last in the frame list,
@@ -5962,7 +5980,7 @@ xul|dialog[inbrowserwindow] {
 :root[echelon-style-6] #appmenu-button-container {
   visibility: collapse !important;
 }
-:root[echelon-style-6] #titlebar-content {
+:root[echelon-style-6]:not([chromehidden~="toolbar"]) #titlebar-content {
   visibility: collapse !important;
 }
 @media (-moz-windows-compositor) {
@@ -6979,7 +6997,7 @@ xul|dialog[inbrowserwindow] {
 :root[echelon-style-7][echelon-style-6] #urlbar #urlbar-input-container .urlbar-history-dropmarker {
   transition: opacity 0.15s ease !important;
 }
-:root[echelon-style-7][echelon-style-6] #urlbar #identity-box {
+:root[echelon-style-7][echelon-style-6]:not([echelon-system-style=win10]) #urlbar #identity-box {
   padding: 3px 5px !important;
   font-size: 0.9em !important;
   transition: padding-left, padding-right !important;
