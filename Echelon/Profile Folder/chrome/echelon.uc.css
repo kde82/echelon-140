@@ -32,6 +32,7 @@
 }
 }
 
+
 /* ::::: Firefox 4 ::::: */
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 /* Tooltip appearance */
@@ -407,10 +408,14 @@ panelview {
   display: none !important;
 }
 
-:root {
+:root #tabbrowser-arrowscrollbox::part(scrollbutton-up),
+:root #tabbrowser-arrowscrollbox::part(scrollbutton-down) {
   --arrowscrollbox-image: url("chrome://echelon/content/firefox-4/tabbrowser/tab-arrow-left.png") !important;
 }
-:root:not([echelon-system-style=winxp])[echelon-style-3], :root[lwtheme-brighttext] {
+:root:not([echelon-system-style=winxp])[echelon-style-3] #tabbrowser-arrowscrollbox::part(scrollbutton-up),
+:root:not([echelon-system-style=winxp])[echelon-style-3] #tabbrowser-arrowscrollbox::part(scrollbutton-down),
+:root[lwtheme-brighttext] #tabbrowser-arrowscrollbox[scrolledtoend]::part(scrollbutton-up),
+:root[lwtheme-brighttext] #tabbrowser-arrowscrollbox[scrolledtoend]::part(scrollbutton-down){
   --arrowscrollbox-image: url("chrome://echelon/content/firefox-8/tabbrowser/tab-arrow-left-inverted.png") !important;
 }
 
@@ -466,11 +471,13 @@ panelview {
 }
 
 /* ::::: Firefox 29 ::::: */
-:root[echelon-style-6] {
+:root[echelon-style-6] #tabbrowser-arrowscrollbox::part(scrollbutton-up),
+:root[echelon-style-6] #tabbrowser-arrowscrollbox::part(scrollbutton-down) {
   --arrowscrollbox-image: url("chrome://echelon/content/firefox-29/tabbrowser/tab-arrow-left.png") !important;
   --tabbrowser-arrowbox-inline-padding: 15px !important;
 }
-:root[echelon-style-6][echelon-system-style=winxp] {
+:root[echelon-style-6][echelon-system-style=winxp] #tabbrowser-arrowscrollbox::part(scrollbutton-up),
+:root[echelon-style-6][echelon-system-style=winxp] #tabbrowser-arrowscrollbox::part(scrollbutton-down){
   --arrowscrollbox-image: url("chrome://echelon/content/firefox-8/tabbrowser/tab-arrow-left-inverted.png") !important;
 }
 
@@ -555,6 +562,30 @@ panelview {
 :root[echelon-style-7] panel[type=arrow][arrowposition=end_after]:-moz-locale-dir(ltr),
 :root[echelon-style-7] #BMB_bookmarksPopup[arrowposition=end_after]:-moz-locale-dir(ltr) {
   transform-origin: left calc(100% - 20px) !important;
+}
+
+:root[echelon-style-7][echelon-system-style=win10] #tabbrowser-arrowscrollbox::part(scrollbutton-up),
+:root[echelon-style-7][echelon-system-style=win10] #tabbrowser-arrowscrollbox::part(scrollbutton-down) {
+  --arrowscrollbox-image: url("chrome://echelon/content/firefox-56/tabbrowser/arrow-left.svg") !important;
+}
+
+:root[echelon-style-7][echelon-system-style=win10] #tabbrowser-arrowscrollbox:not([scrolledtostart])::part(scrollbutton-up), 
+:root[echelon-style-7][echelon-system-style=win10] #tabbrowser-arrowscrollbox:not([scrolledtoend])::part(scrollbutton-down) {
+  border-image: url("chrome://echelon/content/firefox-56/tabbrowser/tab-overflow-indicator.png") 0 0 0 19/2px 19px !important;
+}
+
+:root[echelon-style-7][echelon-system-style=win10] #TabsToolbar .toolbarbutton-1:not(#tabs-newtab-button):hover, 
+:root[echelon-style-7][echelon-system-style=win10] #tabbrowser-arrowscrollbox:not([scrolledtostart])::part(scrollbutton-up):hover,
+:root[echelon-style-7][echelon-system-style=win10] #TabsToolbar .toolbarbutton-1:not(#tabs-newtab-button):hover, 
+:root[echelon-style-7][echelon-system-style=win10] #tabbrowser-arrowscrollbox:not([scrolledtostart])::part(scrollbutton-down):hover, 
+:root[echelon-style-7][echelon-system-style=win10] #tabbrowser-arrowscrollbox:not([scrolledtoend])::part(scrollbutton-up):hover,
+:root[echelon-style-7][echelon-system-style=win10] #tabbrowser-arrowscrollbox:not([scrolledtoend])::part(scrollbutton-down):hover {
+  background-image: unset !important;
+  background-position: unset !important;
+  background-size: unset !important;
+  background-repeat: no-repeat !important;
+  background-color: #B3B3B3 !important;
+  border: 1px solid #8F8F8F !important;
 }
 
 /*# sourceMappingURL=echelon.uc.css.map */
