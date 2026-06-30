@@ -7045,11 +7045,14 @@ xul|dialog[inbrowserwindow] {
   fill: #4d9a26 !important;
   visibility: visible !important;
 }
-:root[echelon-style-7][echelon-style-6] #urlbar #identity-box[pageproxystate=valid].verifiedIdentity #identity-icon-label {
+:root[echelon-style-6] #urlbar #identity-box[pageproxystate=valid].verifiedIdentity #identity-icon-label {
   color: hsl(92, 100%, 30%) !important;
 }
-:root[echelon-style-7][echelon-style-6] #urlbar #identity-box.chromeUI #identity-icon-box #identity-icon {
+:root[echelon-style-6] #urlbar #identity-box.chromeUI #identity-icon-box #identity-icon {
   list-style-image: var(--identity-icons-brand) !important;
+}
+:root[echelon-style-7] #urlbar #identity-box.chromeUI #identity-icon-box #identity-icon {
+  list-style-image: url("chrome://echelon/content/firefox-56/urlbar/identity-icons-brand.svg") !important;
 }
 :root[echelon-style-7][echelon-style-6] #urlbar #identity-box.chromeUI #identity-icon-box #identity-icon-label {
   color: var(--identity-color-brand) !important;
