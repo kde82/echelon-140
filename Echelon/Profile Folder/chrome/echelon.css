@@ -365,7 +365,27 @@ toolbar .toolbarbutton-1 {
 
 
 
-
+#urlbar-search-mode-indicator,
+#identity-box[pageproxystate="valid"]:is(.notSecureText, .chromeUI, .extensionPage) > .identity-box-button, #urlbar-label-box {
+  background-color: unset !important;
+  padding-inline: unset !important;
+  border-radius: unset !important;
+  margin-inline-end: unset !important;
+}
+:root[echelon-style-7][echelon-style-6]:not([echelon-system-style="win10"]) #urlbar-search-mode-indicator,
+:root[echelon-style-7][echelon-style-6]:not([echelon-system-style="win10"]) #identity-box[pageproxystate="valid"]:is(.notSecureText, .chromeUI, .extensionPage) > .identity-box-button, #urlbar-label-box {
+  padding: 3px 5px !important;
+  transition: padding-left, padding-right !important;
+  fill: currentColor !important;
+  fill-opacity: 0.6 !important;
+  overflow: hidden !important;
+  margin-inline-start: -4px !important;
+  padding-inline-end: 4px !important;
+  margin-inline-end: 4px !important;
+  border-inline-end: 1px solid var(--urlbar-separator-color) !important;
+  border-image: linear-gradient(transparent 15%, var(--urlbar-separator-color) 15%, var(--urlbar-separator-color) 85%, transparent 85%) !important;
+  border-image-slice: 1 !important;
+}
 
 /*
 .menupopup-arrowscrollbox::part(scrollbutton-up), 
