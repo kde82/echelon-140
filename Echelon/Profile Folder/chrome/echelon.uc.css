@@ -32,6 +32,17 @@
 }
 }
 
+.tab-drop-indicator {
+  width: 11px !important;
+  height: 11px !important;
+  margin-inline-start: -13px !important;
+  background: url("chrome://echelon/content/firefox-56/tabDragIndicator.png") !important;
+  z-index: 3 !important;
+  top: 30px !important;
+}
+
+
+
 
 /* ::::: Firefox 4 ::::: */
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
@@ -433,6 +444,10 @@ panelview {
   padding-inline: var(--tabbrowser-arrowbox-inline-padding) !important;
 }
 
+:root[echelon-style-6] #tabbrowser-arrowscrollbox::part(scrollbox) {
+  --tabbrowser-arrowbox-inline-padding: 15px !important;
+}
+
 #TabsToolbar .toolbarbutton-1:not(#tabs-newtab-button):hover,
 #tabbrowser-arrowscrollbox:not([scrolledtostart])::part(scrollbutton-up):hover,
 #tabbrowser-arrowscrollbox:not([scrolledtoend])::part(scrollbutton-down):hover {
@@ -564,14 +579,33 @@ panelview {
   transform-origin: left calc(100% - 20px) !important;
 }
 
+:root[echelon-style-7][echelon-system-style=win10] #TabsToolbar #alltabs-button {
+  min-width: 26px !important;
+  border: 1px solid transparent !important;
+}
 :root[echelon-style-7][echelon-system-style=win10] #tabbrowser-arrowscrollbox::part(scrollbutton-up),
 :root[echelon-style-7][echelon-system-style=win10] #tabbrowser-arrowscrollbox::part(scrollbutton-down) {
   --arrowscrollbox-image: url("chrome://echelon/content/firefox-56/tabbrowser/arrow-left.svg") !important;
+  min-width: 26px;
+  border: 1px solid transparent !important;
+  list-style-image: none !important;
+  fill: currentColor !important;
 }
-
+#tabbrowser-arrowscrollbox:hover {
+  background-position-x: unset !important;
+}
 :root[echelon-style-7][echelon-system-style=win10] #tabbrowser-arrowscrollbox:not([scrolledtostart])::part(scrollbutton-up), 
 :root[echelon-style-7][echelon-system-style=win10] #tabbrowser-arrowscrollbox:not([scrolledtoend])::part(scrollbutton-down) {
-  border-image: url("chrome://echelon/content/firefox-56/tabbrowser/tab-overflow-indicator.png") 0 0 0 19/2px 19px !important;
+  border-image: unset !important;
+}
+:root[echelon-style-7][echelon-system-style=win10] #tabbrowser-arrowscrollbox:not([scrolledtostart])::part(scrollbutton-up):after, 
+:root[echelon-style-7][echelon-system-style=win10] #tabbrowser-arrowscrollbox:not([scrolledtoend])::part(scrollbutton-down):after {
+  content: '';
+  position: absolute;
+  left: 24px;
+  width: 19px;
+  height: 32px;
+  border-image: url("chrome://echelon/content/firefox-56/tabbrowser/tab-overflow-indicator.png") 0 19/4px 19px !important;
 }
 
 :root[echelon-style-7][echelon-system-style=win10] #TabsToolbar .toolbarbutton-1:not(#tabs-newtab-button):hover, 
