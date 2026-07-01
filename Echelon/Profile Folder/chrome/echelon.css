@@ -1269,7 +1269,7 @@ window {
   --toolbarbutton-icon-height: 18px;
   --toolbarbutton-icon-large-width: 20px;
   --toolbatbutton-icon-large-height: 20px;
-  --identity-icons-brand: url("chrome://branding/content/icon32.png");
+  --identity-icons-brand: url("chrome://echelon/content/firefox-56/urlbar/identity-icons-brand.svg");
   --identity-color-brand: rgb(229,115,0);
   --identity-background-brand: linear-gradient(rgba(229,114,0,0),
                                rgba(229,114,0,.5) 35%,
@@ -1501,10 +1501,10 @@ window {
 :root[echelon-system-style=winxp] #identity-icon[style="list-style-image: url('chrome://mozapps/skin/extensions/extension.svg');"] {
   list-style-image: url("chrome://echelon/content/firefox-4/xp/extensions/extensionGeneric-16.png") !important;
 }
-:root[echelon-style-6] .tab-icon-image[src="chrome://global/skin/icons/settings.svg"] {
+:root[echelon-style-5] .tab-icon-image[src="chrome://global/skin/icons/settings.svg"] {
   content: url("chrome://echelon/content/firefox-56/preferences.ico") !important;
 }
-:root[echelon-style-6] .tab-icon-image[src="chrome://browser/skin/customize.svg"] {
+:root[echelon-style-5] .tab-icon-image[src="chrome://browser/skin/customize.svg"] {
   content: url("chrome://echelon/content/firefox-56/customizeFavicon.ico") !important;
 }
 :root #page-action-buttons .urlbar-page-action {
@@ -7050,9 +7050,6 @@ xul|dialog[inbrowserwindow] {
 }
 :root[echelon-style-6] #urlbar #identity-box.chromeUI #identity-icon-box #identity-icon {
   list-style-image: var(--identity-icons-brand) !important;
-}
-:root[echelon-style-7] #urlbar #identity-box.chromeUI #identity-icon-box #identity-icon {
-  list-style-image: url("chrome://echelon/content/firefox-56/urlbar/identity-icons-brand.svg") !important;
 }
 :root[echelon-style-7][echelon-style-6] #urlbar #identity-box.chromeUI #identity-icon-box #identity-icon-label {
   color: var(--identity-color-brand) !important;
