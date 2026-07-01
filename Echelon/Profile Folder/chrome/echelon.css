@@ -199,7 +199,7 @@ menulist > menupopup,
 .findbar-textbox {
   background-color: #fff !important;
   color: #333 !important;
-  border: 1px solid ThreeDShadow !important;
+  border: 1px solid #A0A0A0 !important;
   border-radius: 0 !important;
   outline: none !important;
   margin: 1px 0 1px 1px !important;
@@ -220,7 +220,7 @@ menulist > menupopup,
   background: linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.4) 1px, rgba(255,255,255,.1)) !important;
   padding: 1px 6px !important;
   line-height: 1em !important;
-  border: 1px solid ThreeDShadow !important;
+  border: 1px solid #A0A0A0 !important;
   height: 20px !important;
   margin: 1px 0 1px -1px !important;
   &:active {
@@ -260,24 +260,24 @@ menulist > menupopup,
 }
 :root[echelon-style-7] .checkbox-label {
   color: #333;
+  text-shadow: unset !important;
 }
 
 
-
-:root[echelon-style-7][echelon-style-6] #placesList,
-:root[echelon-style-7][echelon-style-6] tree,
-:root[echelon-style-7][echelon-style-6] #downloadsListBox   {
+:root[echelon-style-5] #placesList,
+:root[echelon-style-5] tree,
+:root[echelon-style-5] #downloadsListBox   {
   background-color: #fff !important;
 }
-:root[echelon-style-7][echelon-style-6] #detailsPane {
+:root[echelon-style-5] #detailsPane {
   background-color: #F0F0F0 !important;
   color: var(--organizer-color) !important;
   border-top: 1px solid #A0A0A0 !important;
 }
-:root[echelon-style-7][echelon-style-6] #downloadsListBox > richlistitem {
+:root[echelon-style-5] #downloadsListBox > richlistitem {
   min-height: 6em !important;
 }
-:root[echelon-style-7][echelon-style-6] #contentView richlistitem[selected="true"] {
+:root[echelon-style-5] #contentView richlistitem[selected="true"] {
     color: inherit !important;
     background-color: transparent !important;
     background-image: linear-gradient(to bottom, rgba(255,255,255,0.9) 3px, transparent 3px), linear-gradient(to right, rgba(255,255,255,0.5) 3px, transparent 3px), linear-gradient(to left, rgba(255,255,255,0.5) 3px, transparent 3px), linear-gradient(to top, rgba(255,255,255,0.4) 3px, transparent 3px), linear-gradient(to bottom, rgba(163,196,247,0.3), rgba(122,180,246,0.3)) !important;
@@ -287,38 +287,38 @@ menulist > menupopup,
     outline-offset: -2px !important;
 }
 @media not (-moz-windows-classic) {
-  :root[echelon-style-7][echelon-style-6][echelon-appearance-blue] #placesToolbar {
+  :root[echelon-style-5][echelon-appearance-blue] #placesToolbar {
     background-color: #F0F0F0 !important;
 	min-height: 32px !important;
     appearance: unset !important;
     color: unset !important;
 }
-:root[echelon-style-7][echelon-appearance-blue] #placesMenu menu .menubar-text {
+:root[echelon-style-5][echelon-appearance-blue] #placesMenu menu .menubar-text {
     padding-inline-end: 8px !important;
     background: url("chrome://echelon/content/firefox-4/arrow-dn.gif") right center no-repeat !important;
   }
 }
-:root[echelon-style-7][echelon-style-6] #searchFilter {
+:root[echelon-style-5] #searchFilter {
   min-width: 22.5em !important;
 }
-:root[echelon-style-7][echelon-style-6] #placesToolbar #back-button, 
-:root[echelon-style-7][echelon-style-6] #placesToolbar #forward-button {
+:root[echelon-style-5] #placesToolbar #back-button, 
+:root[echelon-style-5] #placesToolbar #forward-button {
   height: 20px !important;
   width: 19px !important;
   background-image: url("chrome://echelon/content/firefox-56/toolbar/Toolbar.png") !important;
 }
-:root[echelon-style-7][echelon-style-6] #placesToolbar #back-button,
-:root[echelon-style-7][echelon-style-6] #placesToolbar #back-button:hover  {
+:root[echelon-style-5] #placesToolbar #back-button,
+:root[echelon-style-5][echelon-style-6] #placesToolbar #back-button:hover  {
   background-position: -36px 0px !important;
   margin-right: 2px !important;
 }
-:root[echelon-style-7][echelon-style-6] #placesToolbar #forward-button,
-:root[echelon-style-7][echelon-style-6] #placesToolbar #forward-button:hover {
+:root[echelon-style-5] #placesToolbar #forward-button,
+:root[echelon-style-5] #placesToolbar #forward-button:hover {
   background-position: -52px 0 !important;
 
 }
-:root[echelon-style-7][echelon-style-6] #placesToolbar #back-button[disabled], 
-:root[echelon-style-7][echelon-style-6] #placesToolbar #forward-button[disabled] {
+:root[echelon-style-5] #placesToolbar #back-button[disabled], 
+:root[echelon-style-5] #placesToolbar #forward-button[disabled] {
     opacity: .4 !important;
 }
 
@@ -385,6 +385,25 @@ toolbar .toolbarbutton-1 {
   border-inline-end: 1px solid var(--urlbar-separator-color) !important;
   border-image: linear-gradient(transparent 15%, var(--urlbar-separator-color) 15%, var(--urlbar-separator-color) 85%, transparent 85%) !important;
   border-image-slice: 1 !important;
+}
+
+
+
+:root[echelon-style-7][echelon-system-style=win10]:not([echelon-system-style="winxp"]) #TabsToolbar #alltabs-button .toolbarbutton-icon,
+:root[echelon-style-7][echelon-system-style=win10][lwtheme-brighttext] #TabsToolbar #alltabs-button .toolbarbutton-icon,
+:root[echelon-style-7][echelon-system-style=win10][lwtheme="true"][lwtheme-brighttext] #TabsToolbar #alltabs-button .toolbarbutton-icon  {
+  background-image: url("chrome://echelon/content/firefox-56/skin/arrow-dropdown.svg") !important;
+  width: 16px !important;
+  height: 16px !important;
+  list-style-image: none !important;
+  fill: currentColor !important;
+}
+:root[echelon-style-7][echelon-system-style=win10]:not([echelon-system-style="winxp"]) #TabsToolbar #alltabs-button .toolbarbutton-icon, 
+:root[echelon-style-7][echelon-system-style=win10]:not([echelon-system-style="winxp"]) #TabsToolbar #alltabs-button .toolbarbutton-badge-stack, 
+:root[echelon-style-7][echelon-system-style=win10][lwtheme-brighttext] #TabsToolbar #alltabs-button .toolbarbutton-icon, 
+:root[echelon-style-7][echelon-system-style=win10][lwtheme-brighttext] #TabsToolbar #alltabs-button .toolbarbutton-badge-stack {
+  width: 16px !important;
+  height: 16px !important;
 }
 
 /*
@@ -6275,6 +6294,9 @@ xul|dialog[inbrowserwindow] {
 :root[echelon-style-6][echelon-system-style=win8]:not([lwtheme-brighttext]) #echelon-button, :root[echelon-style-6][echelon-system-style=win10]:not([lwtheme-brighttext]) #echelon-button {
   list-style-image: url("chrome://echelon/content/firefox-29/toolbar/win8/echelon.svg") !important;
 }
+:root[echelon-style-6][echelon-system-style=win8]:not([lwtheme-brighttext]) #sidebar-button, :root[echelon-style-6][echelon-system-style=win10]:not([lwtheme-brighttext]) #sidebar-button {
+  list-style-image: url("chrome://echelon/content/firefox-29/toolbar/win8/sidebars.svg") !important;
+}
 :root[echelon-style-6][echelon-system-style=win8][lwtheme-brighttext] #back-button, :root[echelon-style-6][echelon-system-style=win8][echelon-style-5]:not([tabs-on-top=true]) #back-button, :root[echelon-style-6][echelon-system-style=win10][lwtheme-brighttext] #back-button, :root[echelon-style-6][echelon-system-style=win10][echelon-style-5]:not([tabs-on-top=true]) #back-button {
   list-style-image: url("chrome://echelon/content/firefox-29/toolbar/win8/back-large.svg") !important;
 }
@@ -6373,6 +6395,9 @@ xul|dialog[inbrowserwindow] {
 }
 :root[echelon-style-6][echelon-system-style=win8][lwtheme-brighttext] #echelon-button, :root[echelon-style-6][echelon-system-style=win8][echelon-style-5]:not([tabs-on-top=true]) #echelon-button, :root[echelon-style-6][echelon-system-style=win10][lwtheme-brighttext] #echelon-button, :root[echelon-style-6][echelon-system-style=win10][echelon-style-5]:not([tabs-on-top=true]) #echelon-button {
   list-style-image: url("chrome://echelon/content/firefox-29/toolbar/win8/echelon.svg") !important;
+}
+:root[echelon-style-6][echelon-system-style=win8][lwtheme-brighttext] #sidebar-button, :root[echelon-style-6][echelon-system-style=win8][echelon-style-5]:not([tabs-on-top=true]) #sidebar-button, :root[echelon-style-6][echelon-system-style=win10][lwtheme-brighttext] #sidebar-button, :root[echelon-style-6][echelon-system-style=win10][echelon-style-5]:not([tabs-on-top=true]) #sidebar-button {
+  list-style-image: url("chrome://echelon/content/firefox-29/toolbar/win8/sidebars.svg") !important;
 }
 :root[echelon-style-6][echelon-system-style=win8] #save-to-pocket-button, :root[echelon-style-6][echelon-system-style=win10] #save-to-pocket-button {
   --toolbarbutton-icon-width: 18px !important;
@@ -6677,6 +6702,9 @@ xul|dialog[inbrowserwindow] {
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win10]:not([lwtheme-brighttext]) #echelon-button {
   list-style-image: url("chrome://echelon/content/firefox-29/toolbar/win8/echelon.svg") !important;
 }
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10]:not([lwtheme-brighttext]) #sidebar-button {
+  list-style-image: url("chrome://echelon/content/firefox-29/toolbar/win8/sidebars.svg") !important;
+}
 :root[echelon-style-7][echelon-style-6][lwtheme-brighttext][echelon-system-style=win10] #back-button, :root[echelon-style-7][echelon-style-6][echelon-style-5]:not([tabs-on-top=true]) #back-button {
   list-style-image: url("chrome://echelon/content/firefox-29/toolbar/win8/back-large.svg") !important;
 }
@@ -6775,6 +6803,9 @@ xul|dialog[inbrowserwindow] {
 }
 :root[echelon-style-7][echelon-style-6][lwtheme-brighttext][echelon-system-style=win10] #echelon-button, :root[echelon-style-7][echelon-style-6][echelon-style-5]:not([tabs-on-top=true]) #echelon-button {
   list-style-image: url("chrome://echelon/content/firefox-29/toolbar/win8/echelon.svg") !important;
+}
+:root[echelon-style-7][echelon-style-6][lwtheme-brighttext][echelon-system-style=win10] #sidebar-button, :root[echelon-style-7][echelon-style-6][echelon-style-5]:not([tabs-on-top=true]) #sidebar-button {
+  list-style-image: url("chrome://echelon/content/firefox-29/toolbar/win8/sidebars.svg") !important;
 }
 :root[echelon-style-7][echelon-style-6] #save-to-pocket-button {
   --toolbarbutton-icon-width: 18px !important;
