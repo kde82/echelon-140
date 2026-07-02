@@ -217,7 +217,7 @@ img[src="https://addons.mozilla.org/static-server/img/addon-icons/default-32.png
 }
 #category-home > .category-icon {
   list-style-image: url("chrome://echelon/content/firefox-29/toolbar/win8/home.svg") !important;
-  fill: #fbfbfb;
+  fill: #fbfbfb !important;
 }
 @media (max-width: 830px) {
   #categories > .category {
