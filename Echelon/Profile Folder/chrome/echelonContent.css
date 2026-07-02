@@ -1,0 +1,275 @@
+@-moz-document url-prefix(about:preferences),
+			   	   url-prefix(about:addons),
+                   url-prefix(about:neterror),
+                   url-prefix(about:HttpsOnlyError),	
+				   url-prefix(about:httpsonlyerror)	{
+:root {
+	--button-background-normal: transparent;
+	--button-border-color-normal: #C1C1C1;
+	--button-text-color-normal: #333;
+	
+	--in-content-page-background: #FBFBFB !important;
+	--in-content-page-color: #424E5A !important;
+	--in-content-box-border-color: #C1C1C1 !important;
+	--in-content-button-text-color: #333 !important;
+	--in-content-button-border-color: #C1C1C1 !important;
+	--in-content-button-border-color-hover: #C1C1C1 !important;
+	--in-content-button-background: transparent !important;
+	--in-content-button-background-hover: #EBEBEB !important;
+	--in-content-border-highlight: #FF9500;
+    --in-content-category-text-selected: #F2F2F2;
+	--in-content-primary-button-background: #0A84FF !important;
+	--in-content-primary-button-border-color: #0A84FF !important;
+	--in-content-primary-button-background-hover: #0060DF !important;
+	
+	
+	
+	--link-color: #0A84FF !important;
+    --link-color-hover: #0060DF !important;
+    --link-color-active: #0060DF !important;
+    --link-color-visited: #0A84FF !important
+}
+#netErrorButtonContainer > button,
+.button-container > button:last-child,
+.button-container > button:first-child {
+  border-radius: 2px !important;
+  font-weight: normal !important;
+}
+}
+@-moz-document url-prefix(about:HttpsOnlyError),
+               url-prefix(about:httpsonlyerror)				   {
+.title {
+  background-image: url("chrome://echelon/content/firefox-56/skin/cert-error.svg") !important;
+}
+}
+@-moz-document url-prefix(about:preferences),
+			   	   url-prefix(about:addons) {
+:root menulist, :root button:not(.toggle-button, [role="menuitem"], [role="menuitemcheckbox"], .menu-item, .dialogClose, .category, .devtools-tab, .devtools-tabbar-button, .devtools-button, .all-tabs-menu, .open-inspector, .compatibility-footer__button, .devtools-searchinput-clear, .breadcrumbs-widget-item, .devtools-togglebutton, .editor-onboarding-dismiss-button, .command-bar-button, .header-buttons > button, .perf-external-link, .perf-photon-button, .perf-photon-button-ghost, .arrowhead) {
+  min-height: 30px !important;
+  font-size: 15px !important;
+  border-radius: 2px !important;
+  font-weight: normal !important;
+  padding: 2px 10px 3px 10px !important;
+}
+
+#policies-container, #searchInput {
+  min-height: 30px !important;
+  border-radius: 2px !important;
+  color: #333 !important;
+}
+
+
+body {
+  background-color: #FBFBFB;
+}
+.main-content {
+  padding: 0 44px 48px 48px !important;
+}
+
+checkbox, radio {
+  margin: 0 !important;
+}
+
+
+
+#label-box:not([native]) {
+  font-weight: normal !important;
+}
+dropmarker:not([native]) {
+  content: url("chrome://echelon/content/firefox-56/arrow-dn.gif")  !important;
+  width: 8px  !important;
+  height: 5px  !important;
+}
+
+
+
+.accessory-button {
+  min-width: 145px !important;
+  margin: 2px 4px !important;
+}
+
+
+.pane-container {
+  width: 800px !important;
+}
+treecol {
+  background-color: #EBEBEB !important;
+}
+
+.sticky-container {
+  margin-inline: 0 !important;
+  padding-inline: 0 !important;
+}
+
+.addon.card {
+  background: revert !important;
+  border: revert !important;
+  border-radius: revert !important;
+  box-shadow:  revert !important;
+  margin: revert !important;
+  padding: 5px !important;
+  border-bottom: 1px solid #c1c1c1 !important;
+}
+
+.fxaSyncIllustration {
+  list-style-image: url(chrome://echelon/content/firefox-56/skin/sync-illustration.svg) !important; 
+  width: 231px !important;
+  height: auto !important;
+  fill: #bfcbd3 !important;
+}
+
+/* sidebar */
+
+#sidebar {
+  background: #424F5A;
+  width: 186px !important;
+}
+.navigation {
+  background: #424F5A;
+}
+#categories {
+  margin: 40px 0 0 !important;
+  width: 186px !important;
+}
+#categories > .category {
+  border: 0 !important;
+  border-radius: 0 !important;
+  min-height: 40px !important;
+  margin-inline-start: 0 !important;
+  transition: revert !important;
+  padding-inline-start: 11px !important;
+  padding-inline-end: 18px !important;
+  color: #C1C1C1 !important;
+  border-inline-start: solid 4px transparent !important;
+}
+#categories > .category:hover {
+    background-color: #5E6972 !important;
+}
+#categories > .category[selected]:not(:hover),
+#categories > .category[selected]:hover {
+  background-color: #343F48 !important;
+  color: var(--in-content-category-text-selected) !important;
+  border-inline-start: solid 4px var(--in-content-border-highlight) !important;
+}
+.category-name {
+  font-size: 15px !important;
+  line-height: 22px !important;
+  padding-bottom: 2px !important;
+}
+.sidebar-footer-list {
+  margin-block: 0 1rem !important;
+  margin-inline: 0 !important;
+  padding: 0 !important;
+}
+.sidebar-footer-label {
+  font-size: 13px !important;
+  margin: 0 !important;
+}
+.sidebar-footer-icon {
+  width: 14px !important;
+  height: 14px !important;
+  margin-inline-start: 15px !important;
+}
+.sidebar-footer-link {
+  border: 0 !important;
+}
+.sidebar-footer-link:hover {
+  background-color: #5E6972 !important;
+}
+.sidebar-footer-link, .sidebar-footer-link:visited {
+  color: #C1C1C1 !important;
+}
+#category-general > .category-icon, #category-librewolf > .category-icon, #category-librewolf > .category-icon {
+  list-style-image: url("chrome://echelon/content/firefox-56/skin/icons.svg#general") !important;
+}]
+#category-home > .category-icon {
+  list-style-image: url("chrome://browser/skin/home.svg");
+}
+#category-search > .category-icon {
+  list-style-image: url("chrome://echelon/content/firefox-56/skin/icons.svg#search") !important;
+}
+#category-privacy > .category-icon {
+  list-style-image: url("chrome://echelon/content/firefox-56/skin/icons.svg#security") !important;
+}
+#category-sync > .category-icon {
+  list-style-image: url("chrome://echelon/content/firefox-56/skin/icons.svg#sync") !important;
+}
+#addonsButton  {
+  display: none !important;
+}
+.category[name="extension"] {
+  background-image: url("chrome://echelon/content/firefox-56/skin/extensions/category-extensions.svg") !important;
+}
+.category[name="theme"] {
+  background-image: url("chrome://echelon/content/firefox-56/skin/extensions/category-themes.png") !important;
+}
+.category[name="plugin"] {
+  background-image: url("chrome://echelon/content/firefox-56/skin/extensions/category-plugins.png") !important;
+}
+.category[name="locale"] {
+  background-image: url("chrome://echelon/content/firefox-56/skin/extensions/category-extensions.svg");
+}
+img[src="chrome://global/skin/icons/plugin.svg"] {
+	content: url("chrome://echelon/content/firefox-56/skin/extensions/category-plugins.png") !important;
+}
+img[src="https://addons.mozilla.org/static-server/img/addon-icons/default-32.png"] {
+    content:: url("chrome://echelon/content/firefox-56/skin/extensions/category-extensions.svg") !important;
+}
+#category-home > .category-icon {
+  list-style-image: url("chrome://echelon/content/firefox-29/toolbar/win8/home.svg") !important;
+  fill: #fbfbfb;
+}
+@media (max-width: 830px) {
+  #categories > .category {
+    margin-inline-end: 0 !important;
+    width: 55px !important;
+  }
+  #categories,
+  #sidebar   {
+  width: 55px !important;
+}
+}
+/* sidebar */
+}
+@-moz-document  url-prefix(about:addons) {
+#main {
+  margin-inline-start: 0!important;
+  margin-bottom: 28px;
+  max-width: 95% !important;
+}
+.main-search {
+  max-width: 93% !important;
+}
+.main-heading {
+  max-width: 92% !important;
+}
+.category {
+  background-position-x: 11px !important;
+  background-position-y: 8px !important;
+}
+.category-name {
+  padding-inline-start: 31px !important;
+}
+.card-heading-icon {
+  margin: 10px 12px !important;
+}
+.card-heading-image {
+  margin: 0 !important;
+}
+.sidebar-footer-list {
+  display: none !important;
+}
+.page-options-menu > .more-options-button {
+  background-image: url("chrome://echelon/content/firefox-56/skin/extensions/utilities.svg") !important;
+  width: 49px  !important;
+  height: 30px  !important;
+  fill: #424f5a  !important;
+  background-position-x: 10px !important;
+}
+.page-options-menu > .more-options-button:before {
+  content: '';
+  background-image: url("chrome://echelon/content/firefox-56/arrow-dn.gif") !important;
+  width: 5px  !important;
+  height: 3px  !important;
+  margin: 11px 2px !important;
+}
