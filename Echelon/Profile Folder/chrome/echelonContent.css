@@ -1,18 +1,18 @@
 @-moz-document url-prefix(about:preferences),
-			   	   url-prefix(about:addons),
-                   url-prefix(about:neterror),
-				   url-prefix(about:certerror),
-				   url-prefix(about:httpsonlyerror),
-				   url-prefix(about:profiles),
-				   url-prefix(about:networking),
-				   url-prefix(about:buildconfig),
-                   url-prefix(about:debugging),
-				   url-prefix(about:support),
-                   url-prefix(about:config),
-				   url-prefix(about:cache),
-				   url-prefix(about:url-classifier),
-				   url-prefix(about:unloads),
-				   url-prefix(about:third-party) {
+			   url-prefix(about:addons),
+			   url-prefix(about:neterror),
+			   url-prefix(about:certerror),
+			   url-prefix(about:httpsonlyerror),
+			   url-prefix(about:profiles),
+			   url-prefix(about:networking),
+			   url-prefix(about:buildconfig),
+			   url-prefix(about:debugging),
+			   url-prefix(about:support),
+			   url-prefix(about:config),
+			   url-prefix(about:cache),
+			   url-prefix(about:url-classifier),
+			   url-prefix(about:unloads),
+			   url-prefix(about:third-party) {
 :root {
 	--button-background-normal: transparent;
 	--button-border-color-normal: #C1C1C1;
@@ -106,7 +106,7 @@ search-addons > search-textbox,
 }
 }
 @-moz-document url-prefix(about:preferences),
-			   	   url-prefix(about:addons) {
+			   url-prefix(about:addons) {
 #policies-container, #searchInput {
   min-height: 30px !important;
   border-radius: 2px !important;
@@ -560,5 +560,44 @@ h1, .heading-xlarge {
 a, .text-link, ::part(support-link),
 a:hover, .text-link:hover, button.text-link:is(:not([disabled="true"]), :enabled):hover, ::part(support-link):hover {
   color: revert !important;
+}
+}
+@-moz-document url-prefix(about:config) {
+:root:not(.system-font-size) {
+  font-size: 12px !important;
+  --in-content-button-background: #EBEBEB !important;
+  --in-content-button-background-hover: #DADADA !important;
+}
+description, label {
+  margin-block: 0 !important;
+  margin-inline: 0 !important;
+  font-size: 14px !important;
+}
+search-textbox {
+  min-height: 30px !important;
+  padding-inline: 8px !important;
+  border-radius: 2px !important;
+}
+.textbox-search-clear {
+  list-style-image: url('chrome://echelon/content/firefox-4/Search-close.png') !important;
+  -moz-image-region: rect(0, 16px, 16px, 0) !important;
+  height: 14px !important;
+}
+.textbox-search-sign, .textbox-search-icon {
+  width: auto !important;
+  margin-top: 2px !important;
+}
+.textbox-search-clear:hover:not([disabled]) {
+  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
+}
+treechildren::-moz-tree-row(multicol, odd) {
+  background-color: revert !important;
+}
+treechildren::-moz-tree-row(multicol, odd, selected) {
+  background-color: var(--in-content-item-selected) !important;
+}
+select[size][multiple] > html|option:hover,
+treechildren::-moz-tree-row(hover) {
+  background-color: #BFE4F7 !important;
 }
 }
