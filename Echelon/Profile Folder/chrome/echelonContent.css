@@ -1,15 +1,18 @@
 @-moz-document url-prefix(about:preferences),
 			   	   url-prefix(about:addons),
                    url-prefix(about:neterror),
-				   url-prefix(about:NetError),	
+				   url-prefix(about:certerror),
 				   url-prefix(about:httpsonlyerror),
-				   url-prefix(about:HttpsOnlyError),
 				   url-prefix(about:profiles),
 				   url-prefix(about:networking),
 				   url-prefix(about:buildconfig),
                    url-prefix(about:debugging),
 				   url-prefix(about:support),
-                   url-prefix(about:config)				   {
+                   url-prefix(about:config),
+				   url-prefix(about:cache),
+				   url-prefix(about:url-classifier),
+				   url-prefix(about:unloads),
+				   url-prefix(about:third-party) {
 :root {
 	--button-background-normal: transparent;
 	--button-border-color-normal: #C1C1C1;
@@ -96,7 +99,8 @@ search-addons > search-textbox,
 
 }
 @-moz-document url-prefix(about:HttpsOnlyError),
-               url-prefix(about:httpsonlyerror)				   {
+               url-prefix(about:httpsonlyerror),
+               url-prefix(about:certerror) {
 .title {
   background-image: url("chrome://echelon/content/firefox-56/skin/cert-error.svg") !important;
 }
@@ -317,7 +321,7 @@ img[src="https://addons.mozilla.org/static-server/img/addon-icons/default-32.png
 }
 /* sidebar */
 }
-@-moz-document  url-prefix(about:addons) {
+@-moz-document url-prefix(about:addons) {
 #main {
   margin-inline-start: 0!important;
   margin-bottom: 28px;
@@ -360,7 +364,7 @@ img[src="https://addons.mozilla.org/static-server/img/addon-icons/default-32.png
   margin: 11px 2px !important;
 }
 }
-@-moz-document  url-prefix(about:networking)				   {
+@-moz-document url-prefix(about:networking), {
 #categories {
   width: 126px !important;
   background: #424F5A !important;
@@ -391,12 +395,14 @@ background-color: #5E6972 !important;
   border-inline-start: solid 4px var(--in-content-border-highlight) !important;
 }			   
 }
-@-moz-document  url-prefix(about:webrtc),
-                url-prefix(about:robots),
-                url-prefix(about:memory) {
+@-moz-document url-prefix(about:webrtc),
+               url-prefix(about:robots),
+               url-prefix(about:memory),
+               url-prefix(about:serviceworkers)	{
 :root {
   background: -moz-Dialog !important;
   color: -moz-FieldText !important;
+  font-family: Segoe UI !important;
 }
 :root:not(.system-font-size) {
   font-size: unset !important;
@@ -423,7 +429,7 @@ div.opsRowLabel, div.sidebarLabel {
   font-size: 12px !important;
 }
 }
-@-moz-document  url-prefix(about:robots) {
+@-moz-document url-prefix(about:robots) {
 body {
   min-height: revert !important;
   padding: revert !important;
@@ -506,5 +512,53 @@ h1 {
 }
 button-container {
   margin-top: 38px !important;
+}
+}
+@-moz-document url-prefix(about:cache),
+               url-prefix(about:buildconfig) {
+html {
+  line-height: 1.6em  !important;
+  background: -moz-Dialog !important;
+  font-family: Segoe UI !important;
+}
+body {
+  max-width: 80%  !important;
+  min-width: 330px  !important;
+  min-height: auto  !important;
+  padding: 0 30px  !important;
+  margin: 4em auto  !important;
+}
+table {
+  background-color: unset  !important;
+  color: unset !important;
+  font: message-box !important;
+  text-align: unset !important;
+  width: 100% !important;
+  border: unset !important;
+  border-radius: 10px !important;
+  padding: 0.5em 0 !important;
+}
+td {
+  border: unset !important;
+}
+th {
+  background-color: unset !important;
+  color: unset !important;
+  border: unset !important;
+}
+th, td {
+  padding: 0 4px !important;
+  text-align: Segoe UI !important;
+}
+h2 {
+  width: 100% !important;
+}
+h1, .heading-xlarge {
+  font-weight: 300!important;
+  font-size: 28.8px !important;
+}
+a, .text-link, ::part(support-link),
+a:hover, .text-link:hover, button.text-link:is(:not([disabled="true"]), :enabled):hover, ::part(support-link):hover {
+  color: revert !important;
 }
 }
