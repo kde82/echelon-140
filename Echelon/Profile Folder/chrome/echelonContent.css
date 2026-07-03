@@ -133,11 +133,19 @@ dropmarker:not([native]) {
 .pane-container {
   width: 800px !important;
 }
-treecol {
-  background-color: #EBEBEB !important;
-}
 .sticky-inner-container {
   max-width: 800px !important;
+}
+@media (max-width: 830px) {
+.pane-container {
+  width: 600px !important;
+}
+.sticky-inner-container {
+  max-width: 600px !important;
+}
+}
+treecol {
+  background-color: #EBEBEB !important;
 }
 .sticky-container {
   margin-inline: 0 !important;
@@ -240,6 +248,9 @@ treecol {
 #addonsButton  {
   display: none !important;
 }
+.category[name="discover"] {
+  background-image: url("chrome://echelon/content/firefox-56/skin/extensions/category-discover.png") !important;
+}
 .category[name="extension"] {
   background-image: url("chrome://echelon/content/firefox-56/skin/extensions/category-extensions.svg") !important;
 }
@@ -250,7 +261,16 @@ treecol {
   background-image: url("chrome://echelon/content/firefox-56/skin/extensions/category-plugins.png") !important;
 }
 .category[name="locale"] {
-  background-image: url("chrome://echelon/content/firefox-56/skin/extensions/category-extensions.svg");
+  background-image: url("chrome://echelon/content/firefox-56/skin/extensions/category-languages.png") !important;
+}
+.category[name="dictionary"] {
+  background-image: url("chrome://echelon/content/firefox-56/skin/extensions/category-dictionaries.png") !important;
+}
+.category[name="available-updates"] {
+  background-image: url("chrome://echelon/content/firefox-56/skin/extensions/category-available.png") !important;
+}
+.category[name="recent-updates"] {
+  background-image: url("chrome://echelon/content/firefox-56/skin/extensions/category-recent.png") !important;
 }
 img[src="chrome://global/skin/icons/plugin.svg"] {
 	content: url("chrome://echelon/content/firefox-56/skin/extensions/category-plugins.png") !important;
@@ -271,6 +291,19 @@ img[src="https://addons.mozilla.org/static-server/img/addon-icons/default-32.png
   #sidebar   {
   width: 55px !important;
 }
+}
+.category-badge {
+    background-color: #55D4FF !important;
+    padding: 2px 8px !important;
+    margin: 6px 0 !important;
+    margin-inline-start: 6px !important;
+    border-radius: 100% !important;
+    color: #FFF !important;
+    font-weight: bold !important;
+    text-align: center !important;
+}
+.category[name="discover"] {
+  display: block !important;
 }
 /* sidebar */
 }
@@ -315,4 +348,5 @@ img[src="https://addons.mozilla.org/static-server/img/addon-icons/default-32.png
   width: 5px  !important;
   height: 3px  !important;
   margin: 11px 2px !important;
+}
 }
