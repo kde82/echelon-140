@@ -373,7 +373,7 @@ toolbar .toolbarbutton-1 {
   margin-inline-end: unset !important;
 }
 :root[echelon-style-7][echelon-style-6]:not([echelon-system-style="win10"]) #urlbar-search-mode-indicator,
-:root[echelon-style-7][echelon-style-6]:not([echelon-system-style="win10"]) #identity-box[pageproxystate="valid"]:is(.notSecureText, .chromeUI, .extensionPage) > .identity-box-button, #urlbar-label-box {
+:root[echelon-style-7][echelon-style-6]:not([echelon-system-style="win10"]) #urlbar-label-box {
   padding: 3px 5px !important;
   transition: padding-left, padding-right !important;
   fill: currentColor !important;
@@ -406,6 +406,103 @@ toolbar .toolbarbutton-1 {
   height: 16px !important;
 }
 
+
+
+
+.tab-drop-indicator {
+  width: 11px !important;
+  background: url('chrome://echelon/content/firefox-56/tabDragIndicator.png') no-repeat center !important;
+  top: 20px !important;
+}
+
+
+
+
+#notifications-toolbar {
+  background-color: InfoBackground !important;
+  border-style: solid !important;
+  border-width: 1px 1px 0 1px !important;
+  border-top-color: #fff !important;
+  border-bottom-color: #fff !important;
+  border-left-color: threedshadow !important;
+  border-right-color: threedshadow !important;
+}
+#navigator-toolbox::after {
+    margin-top: -1px !important;
+}
+.infobar.animated {
+  background: revert !important;
+  box-shadow: revert !important;
+  border: revert !important;
+  top: -8px !important;
+  height: 27px !important;
+}
+:root[echelon-style-7][echelon-system-style=win10] .infobar.animated { 
+  top: -11px !important;
+}
+.infobar.animated:before {
+  background: unset !important;
+}
+.notification-button {
+  appearance: button !important;
+  padding: 3px !important;
+  font-weight: normal !important;
+  margin: 1px 5px 2px !important;
+  min-width: 6.3em !important;
+  min-height: 28px !important;
+  height: 28px !important;
+}
+notification-message {
+  margin-block-end: 0px !important;
+  margin-inline: 0px !important;
+}
+.icon[data-l10n-id="moz-message-bar-icon-info"] {
+   content: url('chrome://echelon/content/firefox-4/info.png') !important;
+}
+link[href*="infobar"] ~ div.container > .content > .actions.active {
+  position: absolute;
+  right: 0;
+  margin-right: var(--container-content-actions-active);
+}
+link[href*="moz-button"] + button, link[href*="moz-button"] + button > .button-background[size="small"] {
+  background: unset !important;
+}
+.container.infobar .notification-close, .container.infobar .close, link[href*="infobar"] ~ div.container .notification-close, link[href*="infobar"] ~ div.container .close {
+  width: var(--container-infobar-close-width)!important;
+  height: var(--container-infobar-close-height) !important;
+  background-image: var(--container-infobar-close) !important;
+  margin-block: 8px !important;
+  margin: var(--container-infobar-close-margin) !important;
+  margin-block: 8px !important;
+&:hover {
+  background-position-x: var(--container-infobar-close-hover) !important;
+}
+&:hover:active {
+  background-position-x: var(--container-infobar-close-hover-active) !important;
+}
+}
+:root {
+ --container-infobar-close: url("chrome://echelon/content/firefox-4/close.png");
+ --container-infobar-close-width: 16px;
+ --container-infobar-close-height: 16px;
+ --container-infobar-close-hover: -16px;
+ --container-infobar-close-hover-active: -32px;
+ --container-infobar-close-margin: 3px;
+ --container-content-actions-active: 26px;
+}
+:root[echelon-style-6] {
+ --container-infobar-close: url("chrome://echelon/content/firefox-29/close.png");
+}
+:root[echelon-style-7][echelon-system-style=win10] {
+ --container-infobar-close: url("chrome://echelon/content/firefox-56/close.png");
+ --container-infobar-close-width: 20px;
+ --container-infobar-close-height: 20px;
+ --container-infobar-close-hover: -20px;
+ --container-infobar-close-hover-active: -40px;
+ --container-infobar-close-margin: 2px;
+ --container-content-actions-active: 30px;
+}
+
 /*
 .menupopup-arrowscrollbox::part(scrollbutton-up), 
 .menupopup-arrowscrollbox::part(scrollbutton-down) {
@@ -420,7 +517,6 @@ toolbar .toolbarbutton-1 {
 */
 
 /* ::::: Firefox 4 ::::: */
-
 @import "chrome://branding/content/branding.css";
 :root {
   --browser-area-z-index-toolbox: 1 !important;
@@ -7641,7 +7737,7 @@ xul|dialog[inbrowserwindow] {
   padding: 10px !important;
   background-color: -moz-dialog !important;
 }
-:root[echelon-style-7][echelon-style-6] .footer-button,
+:root[echelon-style-7][echelon-style-6] .footer-button:not(.notification-button),
 :root[echelon-style-7][echelon-style-6] .customizationmode-button {
   border: 1px solid #b1b1b1 !important;
   margin: 6px 10px !important;
@@ -7668,7 +7764,7 @@ xul|dialog[inbrowserwindow] {
   border-color: #0060df !important;
   background-color: #0a84ff !important;
 }
-:root[echelon-style-7][echelon-style-6] .footer-button > .box-inherit,
+:root[echelon-style-7][echelon-style-6] .footer-button > .box-inherit:not(.notification-button),
 :root[echelon-style-7][echelon-style-6] .customizationmode-button > .box-inherit {
   border-width: 0 !important;
   padding: 3px 0 !important;
@@ -7679,32 +7775,32 @@ xul|dialog[inbrowserwindow] {
 :root[echelon-style-7][echelon-style-6] #customization-uidensity-button {
   padding-inline-start: 8px !important;
 }
-:root[echelon-style-7][echelon-style-6] .footer-button[type=menu] > .box-inherit > .box-inherit > .button-text,
+:root[echelon-style-7][echelon-style-6] .footer-button[type=menu] > .box-inherit > .box-inherit > .button-text:not(.notification-button),
 :root[echelon-style-7][echelon-style-6] .customizationmode-button[type=menu] > .box-inherit > .box-inherit > .button-text {
   padding-inline-end: 10px !important;
 }
-:root[echelon-style-7][echelon-style-6] .footer-button > .button-icon,
+:root[echelon-style-7][echelon-style-6] .footer-button > .button-icon:not(.notification-button),
 :root[echelon-style-7][echelon-style-6] .customizationmode-button > .button-icon {
   margin-inline-start: 0 !important;
 }
-:root[echelon-style-7][echelon-style-6] .footer-button:not([type=menu]) > .button-text,
+:root[echelon-style-7][echelon-style-6] .footer-button:not([type=menu]) > .button-text:not(.notification-button),
 :root[echelon-style-7][echelon-style-6] .customizationmode-button:not([type=menu]) > .button-text {
   margin-inline-end: 0 !important;
 }
-:root[echelon-style-7][echelon-style-6] .footer-button > .box-inherit > .button-menu-dropmarker,
+:root[echelon-style-7][echelon-style-6] .footer-button > .box-inherit > .button-menu-dropmarker:not(.notification-button),
 :root[echelon-style-7][echelon-style-6] .customizationmode-button > .box-inherit > .button-menu-dropmarker {
   margin-inline-end: 0 !important;
   padding-inline-end: 0 !important;
   list-style-image: url("chrome://echelon/content/firefox-56/skin/arrow-dropdown.svg") !important;
 }
-:root[echelon-style-7][echelon-style-6] .footer-button:is(:focus, :active, :hover):not([disabled]),
+:root[echelon-style-7][echelon-style-6] .footer-button:is(:focus, :active, :hover):not([disabled]):not(.notification-button),
 :root[echelon-style-7][echelon-style-6] .customizationmode-button[open] {
   background-color: #e1e1e5 !important;
 }
 :root[echelon-style-7][echelon-style-6] #customization-done-button:is(:focus, :active, :hover):not([disabled]) {
   background-color: #0060df !important;
 }
-:root[echelon-style-7][echelon-style-6] .footer-button[disabled=true],
+:root[echelon-style-7][echelon-style-6] .footer-button[disabled=true]:not(.notification-button),
 :root[echelon-style-7][echelon-style-6] .customizationmode-button[disabled=true] {
   opacity: 0.5 !important;
 }
