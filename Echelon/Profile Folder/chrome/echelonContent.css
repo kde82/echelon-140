@@ -22,8 +22,8 @@
 	--in-content-page-color: #424E5A !important;
 	--in-content-box-border-color: #C1C1C1 !important;
 	--in-content-button-text-color: #333 !important;
-	--in-content-button-border-color: #C1C1C1 !important;
 	--in-content-border-color: #C1C1C1 !important;
+	--in-content-button-border-color: #C1C1C1 !important;
 	--in-content-button-border-color-hover: #C1C1C1 !important;
 	--in-content-button-background: #FBFBFB !important;
 	--in-content-button-background-hover: #EBEBEB !important;
@@ -364,7 +364,7 @@ img[src="https://addons.mozilla.org/static-server/img/addon-icons/default-32.png
   margin: 11px 2px !important;
 }
 }
-@-moz-document url-prefix(about:networking), {
+@-moz-document url-prefix(about:networking) {
 #categories {
   width: 126px !important;
   background: #424F5A !important;
