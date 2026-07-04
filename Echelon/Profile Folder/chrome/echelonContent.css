@@ -12,7 +12,8 @@
 			   url-prefix(about:cache),
 			   url-prefix(about:url-classifier),
 			   url-prefix(about:unloads),
-			   url-prefix(about:third-party) {
+			   url-prefix(about:third-party),
+               url-prefix(about:about) {
 :root {
 	--button-background-normal: transparent;
 	--button-border-color-normal: #C1C1C1;
