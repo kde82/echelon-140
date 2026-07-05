@@ -5921,7 +5921,7 @@ xul|dialog[inbrowserwindow] {
   overflow: visible !important;
 }
 :root[echelon-style-6] #TabsToolbar .tabbrowser-tab[pinned] {
-  margin-block-start: 1px !important;
+  margin-block-start: 0 !important;
 }
 :root[echelon-style-6] #TabsToolbar .tabbrowser-tab:not([pinned]) {
   min-width: 100px !important;
