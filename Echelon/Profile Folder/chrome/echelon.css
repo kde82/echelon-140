@@ -512,9 +512,6 @@ link[href*="moz-button"] + button, link[href*="moz-button"] + button > .button-b
   }
 }
 
-:root:-moz-lwtheme-brighttext {
-  text-shadow: 1px 1px 1.5px black;
-}
 /*
 .menupopup-arrowscrollbox::part(scrollbutton-up), 
 .menupopup-arrowscrollbox::part(scrollbutton-down) {
