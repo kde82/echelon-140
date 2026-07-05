@@ -178,12 +178,10 @@ menulist > menupopup,
 :root[echelon-style-7] #sidebar-switcher-target:hover {
     border-color: #B7B7B7 !important;
 }
-:root[echelon-style-7] #sidebar-switcher-target:hover, 
-:root[echelon-style-7] #sidebar-close:hover {
+:root[echelon-style-6] #sidebar-switcher-target:hover, 
+:root[echelon-style-6] #sidebar-close:hover {
     background: #E4E4E4 !important;
 }
-
-
 
 
 
@@ -195,6 +193,7 @@ menulist > menupopup,
   background-size: 100% 2px !important;
   background-repeat: no-repeat !important;
   padding-block: 4px !important;
+  color: #333 !important;
 }
 .findbar-textbox {
   background-color: #fff !important;
@@ -260,7 +259,6 @@ menulist > menupopup,
 }
 :root[echelon-style-7] .checkbox-label {
   color: #333;
-  text-shadow: unset !important;
 }
 
 
@@ -504,6 +502,19 @@ link[href*="moz-button"] + button, link[href*="moz-button"] + button > .button-b
  --container-content-actions-active: 30px;
 }
 
+:root[echelon-style-7][echelon-system-style=win10][lwtheme=true][tabsintitlebar=true] #TabsToolbar .tab-close-button:not(:hover, :hover:active, [selected]) {
+    background-position-x: 0 !important;
+}
+
+.tab-close-button:not(.tabbrowser-tab[notselectedsinceload="true"] .tab-close-button.close-icon) {
+  #tabbrowser-tabs[closebuttons="activetab"][orient="horizontal"] &:not([selected]) {
+    display: block !important;
+  }
+}
+
+:root:-moz-lwtheme-brighttext {
+  text-shadow: 1px 1px 1.5px black;
+}
 /*
 .menupopup-arrowscrollbox::part(scrollbutton-up), 
 .menupopup-arrowscrollbox::part(scrollbutton-down) {
@@ -1436,7 +1447,7 @@ window {
 :root:not([lwtheme-brighttext]) #downloads-button[attention=success] {
   list-style-image: url("chrome://echelon/content/firefox-4/toolbar/download-glow.png") !important;
 }
-:root[echelon-style-7]:not([lwtheme-brighttext]) #downloads-button[attention=success] {
+:root[echelon-style-6]:not([lwtheme-brighttext]) #downloads-button[attention=success] {
   list-style-image: url("chrome://echelon/content/firefox-56/toolbar/download-glow.png") !important;
 }
 :root:not([lwtheme-brighttext]) #history-button {
@@ -7040,7 +7051,8 @@ xul|dialog[inbrowserwindow] {
   border-top-color: var(--toolbarbutton-border-color) !important;
   transition-duration: 10ms !important;
 }
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar {
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar {
   width: 32px !important;
   min-width: 32px !important;
   height: 32px !important;
@@ -7051,32 +7063,42 @@ xul|dialog[inbrowserwindow] {
   border-color: var(--backbutton-border-color) !important;
   box-shadow: none !important;
 }
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([open], [disabled=true], :active):hover, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([open], [disabled=true], :active):hover {
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([open], [disabled=true], :active):hover, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([open], [disabled=true], :active):hover {
   background-image: none !important;
   background-color: var(--toolbarbutton-background-hot) !important;
   box-shadow: var(--toolbarbutton-shadow-hot) !important;
 }
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([disabled=true]):hover:active, :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([disabled=true])[open], :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([disabled=true]):hover:active, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([disabled=true])[open] {
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([disabled=true]):hover:active, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([disabled=true])[open], 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([disabled=true]):hover:active, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([disabled=true])[open] {
   background-image: none !important;
   background-color: var(--toolbarbutton-background-active) !important;
   box-shadow: var(--toolbarbutton-shadow-active) !important;
 }
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar {
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar {
   width: 36px !important;
   margin-inline-start: -10px !important;
   background-color: var(--backbutton-background) !important;
   border-color: var(--backbutton-border-color) !important;
 }
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([open], [disabled=true], :active):hover, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([open], [disabled=true], :active):hover {
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([open], [disabled=true], 
+:active):hover, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([open], [disabled=true], :active):hover {
   background-color: var(--toolbarbutton-background-hot) !important;
 }
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([disabled=true]):hover:active, :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([disabled=true])[open], :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([disabled=true]):hover:active, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([disabled=true])[open] {
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([disabled=true]):hover:active, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([disabled=true])[open], 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([disabled=true]):hover:active, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([disabled=true])[open] {
   background-color: var(--toolbarbutton-background-active) !important;
 }
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button {
   position: relative !important;
 }
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button .toolbarbutton-menubutton-button, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button .toolbarbutton-menubutton-button {
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button .toolbarbutton-menubutton-button, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button .toolbarbutton-menubutton-button {
   --toolbarbutton-width: 31px !important;
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
@@ -7091,9 +7113,12 @@ xul|dialog[inbrowserwindow] {
   --toolbarbutton-border-color: rgba(0,0,0,.2) !important;
   box-shadow: var(--toolbarbutton-shadow-hot) !important;
 }
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button:is(:hover, [open]):not([disabled=true]) .toolbarbutton-menubutton-button:active, :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button:is(:hover, [open]):not([disabled=true]) .toolbarbutton-menubutton-button[open],
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button:is(:hover, [open]):not([disabled=true]) .toolbarbutton-menubutton-button:active, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button:is(:hover, [open]):not([disabled=true]) .toolbarbutton-menubutton-button[open],
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button:is(:hover, [open]):not([disabled=true]) .toolbarbutton-menubutton-dropmarker:active,
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button:is(:hover, [open]):not([disabled=true]) .toolbarbutton-menubutton-dropmarker[open], :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button:is(:hover, [open]):not([disabled=true]) .toolbarbutton-menubutton-button:active, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button:is(:hover, [open]):not([disabled=true]) .toolbarbutton-menubutton-button[open],
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button:is(:hover, [open]):not([disabled=true]) .toolbarbutton-menubutton-dropmarker[open], 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button:is(:hover, [open]):not([disabled=true]) .toolbarbutton-menubutton-button:active, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button:is(:hover, [open]):not([disabled=true]) .toolbarbutton-menubutton-button[open],
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button:is(:hover, [open]):not([disabled=true]) .toolbarbutton-menubutton-dropmarker:active,
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button:is(:hover, [open]):not([disabled=true]) .toolbarbutton-menubutton-dropmarker[open] {
   background-image: none !important;
