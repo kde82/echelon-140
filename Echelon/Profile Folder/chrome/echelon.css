@@ -6046,7 +6046,7 @@ xul|dialog[inbrowserwindow] {
   display: flex;
   width: 3px;
 }
-:root[echelon-style-6] #TabsToolbar .tabbrowser-tab[pinned]:not(:hover + .tabbrowser-tab):not(:first-of-type):not(:first-of-type[selected] + .tabbrowser-tab):not(:hover) {
+:root[echelon-style-6] #tabbrowser-tabs[haspinnedtabs][overflow] .tabbrowser-tab[pinned]:not(:hover + .tabbrowser-tab):not(:first-of-type):not(:first-of-type[selected] + .tabbrowser-tab):not(:hover) {
   background-image: url("chrome://echelon/content/firefox-29/tabbrowser/tab-separator.png");
   background-position: left bottom 1px;
   background-repeat: no-repeat;
@@ -6706,7 +6706,7 @@ xul|dialog[inbrowserwindow] {
   content: "";
   display: flex;
 }
-:root[echelon-style-7] #TabsToolbar .tabbrowser-tab[pinned]:not(:hover + .tabbrowser-tab):not(:first-of-type):not(:first-of-type[selected] + .tabbrowser-tab):not(:hover) {
+:root[echelon-style-7] #tabbrowser-tabs[haspinnedtabs][overflow] .tabbrowser-tab[pinned]:not(:hover + .tabbrowser-tab):not(:first-of-type):not(:first-of-type[selected] + .tabbrowser-tab):not(:hover) {
   background-image: linear-gradient(transparent 5px, rgba(0, 0, 0, 0.2) 5px, rgba(0, 0, 0, 0.2) calc(100% - 4px), transparent calc(100% - 4px));
   background-size: 1px 100%;
 }
