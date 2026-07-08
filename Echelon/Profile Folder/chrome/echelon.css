@@ -182,7 +182,9 @@ menulist > menupopup,
 :root[echelon-style-6] #sidebar-close:hover {
     background: #E4E4E4 !important;
 }
-
+#sidebar-switcher-genai-chat {
+  display: none !important;
+}
 
 
 .browserContainer > findbar {
@@ -2253,8 +2255,8 @@ window {
 #PersonalToolbar #personal-bookmarks {
   min-height: 24px !important;
 }
-:root:not([echelon-style-7]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton),
-:root:not([echelon-style-7]) #PersonalToolbar .toolbarbutton-1 {
+:root #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton),
+:root #PersonalToolbar .toolbarbutton-1 {
   margin: 0 !important;
   appearance: toolbarbutton !important;
   -moz-default-appearance: toolbarbutton !important;
@@ -2264,32 +2266,32 @@ window {
   border-radius: 0 !important;
   background-color: transparent !important;
 }
-:root:not([echelon-style-7]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton) .toolbarbutton-icon,
-:root:not([echelon-style-7]) #PersonalToolbar .toolbarbutton-1 .toolbarbutton-icon {
+:root #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton) .toolbarbutton-icon,
+:root #PersonalToolbar .toolbarbutton-1 .toolbarbutton-icon {
   padding: 0 !important;
   border-radius: 0 !important;
   outline: 0 !important;
   background-color: transparent !important;
 }
-:root:not([echelon-style-7]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton) .toolbarbutton-icon[label]:not([label=""]),
-:root:not([echelon-style-7]) #PersonalToolbar .toolbarbutton-1 .toolbarbutton-icon[label]:not([label=""]) {
+:root #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton) .toolbarbutton-icon[label]:not([label=""]),
+:root #PersonalToolbar .toolbarbutton-1 .toolbarbutton-icon[label]:not([label=""]) {
   margin-inline-end: 5px !important;
 }
-:root:not([echelon-style-7]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true]):hover,
-:root:not([echelon-style-7]) #PersonalToolbar .toolbarbutton-1:not([disabled=true]):hover {
+:root #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true]):hover,
+:root #PersonalToolbar .toolbarbutton-1:not([disabled=true]):hover {
   border-color: ThreeDHighlight ThreeDShadow ThreeDShadow ThreeDHighlight !important;
 }
-:root:not([echelon-style-7]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true]):hover, :root:not([echelon-style-7]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true]):hover:active, :root:not([echelon-style-7]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true])[open=true],
-:root:not([echelon-style-7]) #PersonalToolbar .toolbarbutton-1:not([disabled=true]):hover,
-:root:not([echelon-style-7]) #PersonalToolbar .toolbarbutton-1:not([disabled=true]):hover:active,
-:root:not([echelon-style-7]) #PersonalToolbar .toolbarbutton-1:not([disabled=true])[open=true] {
+:root #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true]):hover, :root:not([echelon-style-7]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true]):hover:active, :root:not([echelon-style-7]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true])[open=true],
+:root #PersonalToolbar .toolbarbutton-1:not([disabled=true]):hover,
+:root #PersonalToolbar .toolbarbutton-1:not([disabled=true]):hover:active,
+:root #PersonalToolbar .toolbarbutton-1:not([disabled=true])[open=true] {
   text-shadow: none !important;
   color: -moz-DialogText !important;
 }
-:root:not([echelon-style-7]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true]):hover:active, :root:not([echelon-style-7]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true])[open=true]:hover, :root:not([echelon-style-7]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true])[open=true],
-:root:not([echelon-style-7]) #PersonalToolbar .toolbarbutton-1:not([disabled=true]):hover:active,
-:root:not([echelon-style-7]) #PersonalToolbar .toolbarbutton-1:not([disabled=true])[open=true]:hover,
-:root:not([echelon-style-7]) #PersonalToolbar .toolbarbutton-1:not([disabled=true])[open=true] {
+:root #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true]):hover:active, :root:not([echelon-style-7]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true])[open=true]:hover, :root:not([echelon-style-7]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true])[open=true],
+:root #PersonalToolbar .toolbarbutton-1:not([disabled=true]):hover:active,
+:root #PersonalToolbar .toolbarbutton-1:not([disabled=true])[open=true]:hover,
+:root #PersonalToolbar .toolbarbutton-1:not([disabled=true])[open=true] {
   border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow !important;
   padding-top: 4px !important;
   padding-bottom: 2px !important;
@@ -6948,12 +6950,12 @@ xul|dialog[inbrowserwindow] {
   min-height: 24px !important;
 }
 :root[echelon-style-7][echelon-style-6] #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton),
-:root[echelon-style-7][echelon-style-6] #PersonalToolbar .toolbarbutton-1 {
+:root[echelon-style-7][echelon-style-6] #PersonalToolbar toolbarbutton.bookmark-item {
   margin: 0 !important;
   padding: 2px 3px !important;
 }
 :root[echelon-style-7][echelon-style-6]:not([echelon-system-style=win8], [echelon-system-style=win10]) .bookmark-item:not(menuitem, .subviewbutton),
-:root[echelon-style-7][echelon-style-6]:not([echelon-system-style=win8], [echelon-system-style=win10]) .toolbarbutton-1 {
+:root[echelon-style-7][echelon-style-6]:not([echelon-system-style=win8], [echelon-system-style=win10]) toolbarbutton.bookmark-item {
   background-origin: padding-box !important;
   background-clip: padding-box !important;
   border: 1px solid var(--toolbarbutton-border-color) !important;
@@ -6992,7 +6994,7 @@ xul|dialog[inbrowserwindow] {
   margin-inline-start: 2px !important;
 }
 :root[echelon-style-7][echelon-style-6]:not([echelon-system-style=win8], [echelon-system-style=win10]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton),
-:root[echelon-style-7][echelon-style-6]:not([echelon-system-style=win8], [echelon-system-style=win10]) #PersonalToolbar .toolbarbutton-1 {
+:root[echelon-style-7][echelon-style-6]:not([echelon-system-style=win8], [echelon-system-style=win10]) #PersonalToolbar toolbarbutton.bookmark-item {
   appearance: none !important;
   background-clip: padding-box !important;
   border: 1px solid transparent !important;
@@ -7002,15 +7004,15 @@ xul|dialog[inbrowserwindow] {
   transition-duration: 150ms !important;
 }
 :root[echelon-style-7][echelon-style-6]:not([echelon-system-style=win8], [echelon-system-style=win10]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true]):hover,
-:root[echelon-style-7][echelon-style-6]:not([echelon-system-style=win8], [echelon-system-style=win10]) #PersonalToolbar .toolbarbutton-1:not([disabled=true]):hover {
+:root[echelon-style-7][echelon-style-6]:not([echelon-system-style=win8], [echelon-system-style=win10]) #PersonalToolbar toolbarbutton.bookmark-item:not([disabled=true]):hover {
   background-image: -moz-linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0.1)) !important;
   background-color: var(--toolbarbutton-background) !important;
   --toolbarbutton-border-color: hsla(210,54%,20%,.15) hsla(210,54%,20%,.2) hsla(210,54%,20%,.25) !important;
   box-shadow: var(--toolbarbutton-shadow-hot) !important;
 }
 :root[echelon-style-7][echelon-style-6]:not([echelon-system-style=win8], [echelon-system-style=win10]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true]):hover:active, :root[echelon-style-7][echelon-style-6]:not([echelon-system-style=win8], [echelon-system-style=win10]) #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true])[open],
-:root[echelon-style-7][echelon-style-6]:not([echelon-system-style=win8], [echelon-system-style=win10]) #PersonalToolbar .toolbarbutton-1:not([disabled=true]):hover:active,
-:root[echelon-style-7][echelon-style-6]:not([echelon-system-style=win8], [echelon-system-style=win10]) #PersonalToolbar .toolbarbutton-1:not([disabled=true])[open] {
+:root[echelon-style-7][echelon-style-6]:not([echelon-system-style=win8], [echelon-system-style=win10]) #PersonalToolbar toolbarbutton.bookmark-item:not([disabled=true]):hover:active,
+:root[echelon-style-7][echelon-style-6]:not([echelon-system-style=win8], [echelon-system-style=win10]) #PersonalToolbar toolbarbutton.bookmark-item:not([disabled=true])[open] {
   box-shadow: var(--toolbarbutton-shadow-active) !important;
   background-image: var(--toolbarbutton-background-active) !important;
   background-color: hsla(210, 54%, 20%, 0.15) !important;
@@ -7023,20 +7025,20 @@ xul|dialog[inbrowserwindow] {
 }
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified),
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton),
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #PersonalToolbar .toolbarbutton-1, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified),
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #PersonalToolbar toolbarbutton.bookmark-item, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified),
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton),
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #PersonalToolbar .toolbarbutton-1 {
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #PersonalToolbar toolbarbutton.bookmark-item {
   background-clip: padding-box !important;
 }
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified):not([disabled=true]):hover, :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([open], [disabled=true], :active):hover,
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true]):hover,
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton)#forward-button.unified-with-urlbar:not([open], [disabled=true], :active):hover,
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #PersonalToolbar .toolbarbutton-1:not([disabled=true]):hover,
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #PersonalToolbar .toolbarbutton-1#forward-button.unified-with-urlbar:not([open], [disabled=true], :active):hover, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified):not([disabled=true]):hover, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([open], [disabled=true], :active):hover,
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #PersonalToolbar toolbarbutton.bookmark-item:not([disabled=true]):hover,
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #PersonalToolbar toolbarbutton.bookmark-item#forward-button.unified-with-urlbar:not([open], [disabled=true], :active):hover, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified):not([disabled=true]):hover, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([open], [disabled=true], :active):hover,
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true]):hover,
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton)#forward-button.unified-with-urlbar:not([open], [disabled=true], :active):hover,
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #PersonalToolbar .toolbarbutton-1:not([disabled=true]):hover,
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #PersonalToolbar .toolbarbutton-1#forward-button.unified-with-urlbar:not([open], [disabled=true], :active):hover {
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #PersonalToolbar toolbarbutton.bookmark-item:not([disabled=true]):hover,
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #PersonalToolbar toolbarbutton.bookmark-item#forward-button.unified-with-urlbar:not([open], [disabled=true], :active):hover {
   background-image: none !important;
   background-color: var(--toolbarbutton-background-hot) !important;
   --toolbarbutton-border-color: rgba(0,0,0,.2) !important;
@@ -7045,12 +7047,12 @@ xul|dialog[inbrowserwindow] {
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified):not([disabled=true]):hover:active, :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified):not([disabled=true])[open],
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true]):hover:active,
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true])[open],
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #PersonalToolbar .toolbarbutton-1:not([disabled=true]):hover:active,
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #PersonalToolbar .toolbarbutton-1:not([disabled=true])[open], :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified):not([disabled=true]):hover:active, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified):not([disabled=true])[open],
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #PersonalToolbar toolbarbutton.bookmark-item:not([disabled=true]):hover:active,
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #PersonalToolbar toolbarbutton.bookmark-item:not([disabled=true])[open], :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified):not([disabled=true]):hover:active, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified):not([disabled=true])[open],
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true]):hover:active,
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #PersonalToolbar .bookmark-item:not(menuitem, .subviewbutton):not([disabled=true])[open],
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #PersonalToolbar .toolbarbutton-1:not([disabled=true]):hover:active,
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #PersonalToolbar .toolbarbutton-1:not([disabled=true])[open] {
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #PersonalToolbar toolbarbutton.bookmark-item:not([disabled=true]):hover:active,
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #PersonalToolbar toolbarbutton.bookmark-item:not([disabled=true])[open] {
   background-image: none !important;
   background-color: var(--toolbarbutton-background-active) !important;
   box-shadow: var(--toolbarbutton-shadow-active) !important;
@@ -7058,8 +7060,8 @@ xul|dialog[inbrowserwindow] {
   border-top-color: var(--toolbarbutton-border-color) !important;
   transition-duration: 10ms !important;
 }
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar, 
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar {
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar toolbarbutton.bookmark-item:not(.unified)#back-button.unified-with-urlbar, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar toolbarbutton.bookmark-item:not(.unified)#back-button.unified-with-urlbar {
   width: 32px !important;
   min-width: 32px !important;
   height: 32px !important;
@@ -7070,35 +7072,35 @@ xul|dialog[inbrowserwindow] {
   border-color: var(--backbutton-border-color) !important;
   box-shadow: none !important;
 }
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([open], [disabled=true], :active):hover, 
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([open], [disabled=true], :active):hover {
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar toolbarbutton.bookmark-item:not(.unified)#back-button.unified-with-urlbar:not([open], [disabled=true], :active):hover, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar toolbarbutton.bookmark-item:not(.unified)#back-button.unified-with-urlbar:not([open], [disabled=true], :active):hover {
   background-image: none !important;
   background-color: var(--toolbarbutton-background-hot) !important;
   box-shadow: var(--toolbarbutton-shadow-hot) !important;
 }
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([disabled=true]):hover:active, 
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([disabled=true])[open], 
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([disabled=true]):hover:active, 
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#back-button.unified-with-urlbar:not([disabled=true])[open] {
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar toolbarbutton.bookmark-item:not(.unified)#back-button.unified-with-urlbar:not([disabled=true]):hover:active, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar toolbarbutton.bookmark-item:not(.unified)#back-button.unified-with-urlbar:not([disabled=true])[open], 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar toolbarbutton.bookmark-item:not(.unified)#back-button.unified-with-urlbar:not([disabled=true]):hover:active, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar toolbarbutton.bookmark-item:not(.unified)#back-button.unified-with-urlbar:not([disabled=true])[open] {
   background-image: none !important;
   background-color: var(--toolbarbutton-background-active) !important;
   box-shadow: var(--toolbarbutton-shadow-active) !important;
 }
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar, 
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar {
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar toolbarbutton.bookmark-item:not(.unified)#forward-button.unified-with-urlbar, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar toolbarbutton.bookmark-item:not(.unified)#forward-button.unified-with-urlbar {
   width: 36px !important;
   margin-inline-start: -10px !important;
   background-color: var(--backbutton-background) !important;
   border-color: var(--backbutton-border-color) !important;
 }
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([open], [disabled=true], 
-:active):hover, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([open], [disabled=true], :active):hover {
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar toolbarbutton.bookmark-item:not(.unified)#forward-button.unified-with-urlbar:not([open], [disabled=true], 
+:active):hover, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar toolbarbutton.bookmark-item:not(.unified)#forward-button.unified-with-urlbar:not([open], [disabled=true], :active):hover {
   background-color: var(--toolbarbutton-background-hot) !important;
 }
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([disabled=true]):hover:active, 
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([disabled=true])[open], 
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([disabled=true]):hover:active, 
-:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .toolbarbutton-1:not(.unified)#forward-button.unified-with-urlbar:not([disabled=true])[open] {
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar toolbarbutton.bookmark-item:not(.unified)#forward-button.unified-with-urlbar:not([disabled=true]):hover:active, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar toolbarbutton.bookmark-item:not(.unified)#forward-button.unified-with-urlbar:not([disabled=true])[open], 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar toolbarbutton.bookmark-item:not(.unified)#forward-button.unified-with-urlbar:not([disabled=true]):hover:active, 
+:root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar toolbarbutton.bookmark-item:not(.unified)#forward-button.unified-with-urlbar:not([disabled=true])[open] {
   background-color: var(--toolbarbutton-background-active) !important;
 }
 :root[echelon-style-7][echelon-style-6][echelon-system-style=win8] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button, :root[echelon-style-7][echelon-style-6][echelon-system-style=win10] #navigator-toolbox > #nav-bar .echelon-unified-bookmarks-menu-button {
