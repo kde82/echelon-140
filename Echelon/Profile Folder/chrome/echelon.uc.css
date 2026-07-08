@@ -444,7 +444,7 @@ panelview {
   padding-inline: var(--tabbrowser-arrowbox-inline-padding) !important;
 }
 
-:root[echelon-style-6] #tabbrowser-arrowscrollbox::part(scrollbox) {
+:root[echelon-style-6] #tabbrowser-arrowscrollbox {
   --tabbrowser-arrowbox-inline-padding: 15px !important;
 }
 
@@ -623,3 +623,4 @@ panelview {
 }
 
 /*# sourceMappingURL=echelon.uc.css.map */
+
