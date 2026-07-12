@@ -219,7 +219,7 @@ menulist > menupopup,
 .findbar-find-previous, 
 .findbar-find-next {
   background: linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.4) 1px, rgba(255,255,255,.1)) !important;
-  padding: 1px 6px !important;
+  padding: 1px 5px !important;
   line-height: 1em !important;
   border: 1px solid #A0A0A0 !important;
   height: 20px !important;
@@ -230,17 +230,26 @@ menulist > menupopup,
 }
 }
 .findbar-find-previous {
-  list-style-image: url('chrome://echelon/content/firefox-56/find/find-arrows-previous.png') !important;
+  list-style-image: url('chrome://echelon/content/firefox-56/find-previous-arrow.svg') !important;
   border-radius: 0px !important;
+  padding-top: 2px !important;
 }
 .findbar-find-next {
-  list-style-image: url('chrome://echelon/content/firefox-56/find/find-arrows-next.png') !important;
+  list-style-image: url('chrome://echelon/content/firefox-56/find-next-arrow.svg') !important;
   border-radius: 0 2px 2px 0 !important;
 }
 .findbar-find-previous, .findbar-find-next {
   &[disabled="true"] > .toolbarbutton-icon {
     opacity: .5 !important;
   }
+}
+.findbar-find-previous:active:not([disabled]), .findbar-find-next:active:not([disabled]) {
+    background: rgba(23,50,76,.2) !important;
+    box-shadow: 0 1px 2px rgba(10,31,51,.2) inset !important;
+}
+.findbar-textbox[status="notfound"] {
+    background-color: #f66 !important;
+    color: white !important;
 }
 :root[echelon-style-7] .findbar-container > checkbox, .findbar-label {
   margin: 0 4px;
@@ -4791,17 +4800,17 @@ echelon-splitmenu .splitmenu-menu > .menu-accel-container,
   }
 }
 
-treechildren::-moz-tree-twisty {
+treechildren::-moz-tree-twisty:not([echelon-style-7]) {
   padding-inline: 0 !important;
   width: 16px !important;
   list-style-image: url("chrome://echelon/content/firefox-4/places/collapse.png") !important;
 }
 
-treechildren:-moz-locale-dir(rtl)::-moz-tree-twisty(closed) {
+treechildren:-moz-locale-dir(rtl)::-moz-tree-twisty(closed):not([echelon-style-7]) {
   list-style-image: url("chrome://echelon/content/firefox-4/places/collapse.png") !important;
 }
 
-treechildren::-moz-tree-twisty(open) {
+treechildren::-moz-tree-twisty(open):not([echelon-style-7]) {
   list-style-image: url("chrome://echelon/content/firefox-4/places/expand.png") !important;
 }
 
@@ -4823,10 +4832,6 @@ treechildren::-moz-tree-image(container, queryFolder_menu________),
   list-style-image: url("chrome://echelon/content/firefox-4/places/bookmarksMenu.png") !important;
 }
 
-treechildren::-moz-tree-image(query) {
-  list-style-image: url("chrome://echelon/content/firefox-4/places/folder-smart.svg");
-}
-
 treechildren::-moz-tree-image(query, OrganizerQuery_allbms_____v) {
   list-style-image: url("chrome://echelon/content/firefox-4/places/allBookmarks.png") !important;
 }
@@ -4845,6 +4850,33 @@ treechildren::-moz-tree-image(title, query, dayContainer) {
 }
 treechildren::-moz-tree-image(query, OrganizerQuery_history____v) {
   list-style-image: url("chrome://echelon/content/firefox-4/places/history.png") !important;
+}
+
+treechildren::-moz-tree-image(query) {
+  list-style-image: url("chrome://echelon/content/firefox-4/places/folder-smart.svg");
+}
+
+:root[echelon-style-7] treechildren::-moz-tree-image(title, container),
+:root[echelon-style-7] treechildren::-moz-tree-image(title, open),
+:root[echelon-style-7] treechildren::-moz-tree-image(title, query, hostContainer),
+:root[echelon-style-7] treechildren::-moz-tree-image(title, query, folder),
+:root[echelon-style-7] .folder-icon  {
+  list-style-image: url("chrome://echelon/content/firefox-56/bookmarks/folder.svg") !important;
+}
+:root[echelon-style-7] treechildren::-moz-tree-image(container, queryFolder_toolbar_____),
+:root[echelon-style-7] #editBMPanel_toolbarFolderItem  {
+  list-style-image: url("chrome://echelon/content/firefox-56/bookmarks/bookmarksToolbar.svg") !important;
+}
+:root[echelon-style-7] treechildren::-moz-tree-image(container, queryFolder_menu________),
+:root[echelon-style-7] #editBMPanel_bmRootItem  {
+  list-style-image: url("chrome://echelon/content/firefox-56/bookmarks/bookmarksMenu.svg") !important;
+}
+:root[echelon-style-7] treechildren::-moz-tree-image(query) {
+  list-style-image: url("chrome://echelon/content/firefox-56/bookmarks/folder-smart.svg");
+}
+:root[echelon-style-7] treechildren::-moz-tree-image(query, OrganizerQuery_history____v),
+:root[echelon-style-7] treechildren::-moz-tree-image(title, query, dayContainer) {
+  list-style-image: url("chrome://echelon/content/firefox-56/bookmarks/history.svg") !important;
 }
 
 .expander-up, .expander-down {
