@@ -4800,17 +4800,20 @@ echelon-splitmenu .splitmenu-menu > .menu-accel-container,
   }
 }
 
-treechildren::-moz-tree-twisty:not([echelon-style-7]) {
+treechildren::-moz-tree-twisty {
   padding-inline: 0 !important;
   width: 16px !important;
+}
+
+:root:not([echelon-style-7]) treechildren::-moz-tree-twisty {
   list-style-image: url("chrome://echelon/content/firefox-4/places/collapse.png") !important;
 }
 
-treechildren:-moz-locale-dir(rtl)::-moz-tree-twisty(closed):not([echelon-style-7]) {
+:root:not([echelon-style-7]) treechildren:-moz-locale-dir(rtl)::-moz-tree-twisty(closed) {
   list-style-image: url("chrome://echelon/content/firefox-4/places/collapse.png") !important;
 }
 
-treechildren::-moz-tree-twisty(open):not([echelon-style-7]) {
+:root:not([echelon-style-7]) treechildren::-moz-tree-twisty(open) {
   list-style-image: url("chrome://echelon/content/firefox-4/places/expand.png") !important;
 }
 
