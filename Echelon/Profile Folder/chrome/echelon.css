@@ -369,10 +369,14 @@ toolbar .toolbarbutton-1 {
   display: ruby !important;
 }
 :root[chromehidden~="toolbar"] #navigator-toolbox::after,
-:root[chromehidden~="toolbar"] #notifications-toolbar {
+:root[chromehidden~="toolbar"] #notifications-toolbar,
+:root[chromehidden~="toolbar"] #TabsToolbar-customization-target {
   display: none !important;
 }
-
+:root[chromehidden~="toolbar"] {
+  --lwt-header-image: unset !important;
+  --lwt-accent-color: unset !important;
+}
 
 
 
