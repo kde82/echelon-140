@@ -139,7 +139,7 @@ dropmarker:not([native]) {
 }
 menulist > menupopup {
   --panel-border-radius: 0 !important;
-  --panel-background: unset !important;
+  --panel-background: #fff !important;
   --panel-color: var(--in-content-text-color) !important;
 }
 menu, menuitem, menucaption {
