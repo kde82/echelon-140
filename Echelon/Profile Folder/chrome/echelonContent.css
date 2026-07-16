@@ -135,9 +135,16 @@ dropmarker:not([native]) {
   content: url("chrome://echelon/content/firefox-56/arrow-dn.gif")  !important;
   width: 8px  !important;
   height: 5px  !important;
+  margin: auto  !important;
 }
-
-
+menulist > menupopup {
+  --panel-border-radius: 0 !important;
+  --panel-background: unset !important;
+  --panel-color: var(--in-content-text-color) !important;
+}
+menu, menuitem, menucaption {
+  border-radius: 0 !important;
+}
 
 .accessory-button {
   min-width: 145px !important;
